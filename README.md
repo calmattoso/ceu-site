@@ -51,7 +51,7 @@ receive the following data:
 -   **samples**: the **id** for the current lesson
 -   **go**: Run! (it checks if this attribute is set)
 -   **mode**: used to specify if the code should be executed, which
-    happens when it’s set to **run**. Otherwhise, the code will only be
+    happens when it’s set to **run**. Otherwise, the code will only be
     compiled.
 -   **dfa**: if set, a **static analysis** will be performed on the file
 -   **input**: input for the program
