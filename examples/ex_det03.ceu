@@ -1,0 +1,11 @@
+int v = 0;
+par/or do
+    loop do
+        await 10ms;
+        v = v + 1;      // non-deterministic access (on 10th iteration)
+    end
+with
+    await 100ms;
+    v = v * 2;          // non-deterministic access
+end
+return v;               // returns 19 or 20

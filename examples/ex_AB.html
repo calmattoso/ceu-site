@@ -1,0 +1,48 @@
+<p>
+The existence of a parallel statement raises several questions regarding how trails 
+scheduled during execution. Nonetheless, the concurrency properties of C&eacute;u are 
+quite simple and easy to grasp.
+</p>
+
+<blockquote>
+	<p><i>C&eacute;u doesn't require semaphores, locks, or any other synchronization primitive!</i></p>
+</blockquote>
+
+<p>
+Some rules are respected during the execution of programs, 
+the first of which is <span class="label label-info">Synchronous Execution</span>.
+</p>
+
+<p>
+A program execution is <i>synchronous</i> with respect to input events. This means that while trails 
+are reacting to the current input event, no further events are handled.
+</p>
+
+<p>
+The period in which trails are reacting to a given input event is named as a <span class="label label-info">reaction chain</span>. 
+A trail only halts (i.e. stops to react) when it awaits again or terminates.
+</p>
+
+<p>
+In the following example, suppose the event <code>A</code> occurs just before <code>B</code>.
+</p>
+
+<p>
+Initially, both trails in parallel are awaiting. The occurrence of <code>A</code> awakes the 
+first trail that performs the increment on <code>v</code>. If the event B occurs in the middle 
+of the increment operation, it is delayed until the running reaction chain terminates. 
+Hence, there is no possible race condition on accessing <code>v</code> and, given the sequence <code>A->>B</code>, 
+the only possible result for the program is <code>((0+1)*2)</code>.
+</p>
+
+<blockquote>
+	<p><i>Reactions to input events do not overlap.</i></p>
+</blockquote>
+
+<p>
+But what if a trail executes endlessly and never halts, 
+how further input events could be handled?
+</p>
+<p>
+And what if multiple trails react to the same input event and access the same variables?
+</p>

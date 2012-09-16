@@ -1,0 +1,4 @@
+emit MyEvt(10);     // inputs the event MyEvt set to 10
+emit MyEvt(5);
+emit MyEvt(0);
+emit MyEvt(99);     // no effect (the loop has already escaped)

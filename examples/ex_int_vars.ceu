@@ -1,0 +1,23 @@
+input int Start;
+event int v1, v2;
+par/or do
+    loop do
+        await v2;
+        v1 = v2 + 1;
+    end
+with
+    loop do
+        await v1;
+        v2 = v1 - 1;
+    end
+with
+    // tests the constraint
+    await Start;
+    emit v1(2);         // use `emit' instead of simply `='
+    _printf("v1=%2d   v2=%2d\n", v1, v2);
+    emit v2(12);
+    _printf("v1=%2d   v2=%2d\n", v1, v2);
+    emit v1(0);
+    _printf("v1=%2d   v2=%2d\n", v1, v2);
+    return 0;
+end

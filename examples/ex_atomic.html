@@ -1,0 +1,13 @@
+<p>
+Some applications are inherently non-deterministic and require the deterministic property of C&eacute;u to be relaxed.
+ (That's why the static analysis raises a warning instead of an error.)
+</p>
+
+<p>
+For these situations, C&eacute;u ensures that the concurrent trails' segments that access 
+the same variables execute atomically, i.e., they are never interrupted.
+</p>
+
+<blockquote>
+	<p><i>C&eacute;u prevents race conditions on concurrent access to shared variables!</i></p>
+</blockquote>

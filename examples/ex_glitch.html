@@ -1,0 +1,20 @@
+<p>
+In this example, both trails in the <code>par/or</code> terminate at the same time.
+</p>
+
+<p>
+Once one of the trails (e.g. line 3) terminate, the <code>par/or</code> composition could proceed 
+to its join point (line 7). However, the trail in parallel (e.g. line 5) is also executing,
+ what would make the <code>par/or</code> terminate again and re-execute the join point, 
+ characterizing a <span class="label label-info">glitch</span>.
+</p>
+
+<p> 
+In order to avoid glitches, C&eacute;u assigns different priorities to statements at compile time, 
+so that they execute in the expected order. In the example, both assignments execute
+ before the return statement.
+</p>
+
+<blockquote>
+	<p><i>C&eacute;u is glitch-free!</i></p>
+</blockquote>

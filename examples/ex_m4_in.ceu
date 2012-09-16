@@ -1,0 +1,7 @@
+emit A(1);
+emit B(1);
+emit A(10);     // prints 10
+emit B(-1);
+emit A(11);     // prints 11
+emit A(0);
+emit B(0);

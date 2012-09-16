@@ -1,0 +1,23 @@
+@define(AWAIT_COND, `
+set do
+    loop do
+        int v = await $1;
+        if v $2 $3 then
+            return v;
+        end
+    end
+end
+')
+
+input int A, B;
+
+par/or do
+    loop do
+        int v = @AWAIT_COND(A, `>=', 5);
+        _printf("A = %d\n", v);
+    end
+with
+    int v = @AWAIT_COND(B, `==', 0);
+end
+
+return 0;

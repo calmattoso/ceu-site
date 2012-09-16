@@ -1,0 +1,11 @@
+input void A;
+int v;
+par/and do
+    await A;
+    v = 1;          // deterministic access
+with
+    await A;
+    await A;
+    v = 2;          // deterministic access
+end
+return v;           // returns 2

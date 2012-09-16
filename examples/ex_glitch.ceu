@@ -1,0 +1,7 @@
+int v1=0, v2=0;
+par/or do
+    v1 = 1;         // priority=2
+with
+    v2 = 2;         // priority=2
+end
+return v1 + v2;     // priority=1 (returns 3)

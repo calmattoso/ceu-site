@@ -1,0 +1,9 @@
+emit A;   // v = 1 or 2
+emit B;   // v = 2 or 3
+emit C;   // v = 4 or 6
+
+/*
+emit A;   // v = 1 or 2
+emit C;   // v = 2 or 4
+emit B;   // v = 3 or 5
+*/

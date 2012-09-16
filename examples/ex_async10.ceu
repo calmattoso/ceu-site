@@ -1,0 +1,14 @@
+int ret = set async do
+    // calculates fat of 10
+    int fat = 1;
+    int i = 10;
+    loop do
+        if i == 1 then
+            break;
+        end
+        fat = fat * i;
+        i = i - 1;
+    end
+    return fat;
+end;
+return ret;

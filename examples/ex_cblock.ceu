@@ -1,0 +1,16 @@
+C do
+    int soma (int a, int b) {
+        return a+b;
+    }
+
+    typedef struct {
+        int a;
+        int b;
+    } mystruct;
+end
+
+_mystruct s;
+_mystruct* ps = &s;
+s.a = 10;
+ps->b = 5;
+return _soma(ps->a, s.b);

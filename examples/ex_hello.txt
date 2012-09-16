@@ -1,0 +1,11 @@
+<p>Follows a reactive <i>Hello World!</i> in C&eacute;u that prints the infamous message every 250 milliseconds:</p>
+   
+<p>The <code>await</code> statement halts the running line of execution until 
+the referred event occurs (in this case, the elapsing of 250 milliseconds).</p>
+
+<span class="label label-important">Important</span>
+<p>In Céu, external C symbols like <code>printf</code> must be preceded with an <b>underscore</b>.</p>
+
+<p>The <code>loop</code> statement in the example repeats its body indefinitely.</p>
+
+<p><b>Timers are integrated with the language!<b></p>

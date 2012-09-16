@@ -1,0 +1,10 @@
+// input event identifiers begin in uppercase
+input int MyEvt;             // `MyEvt' is an input event of integers
+loop do
+    int v = await MyEvt;     // `v' gets the next triggered value of `Evt1'
+    _printf("MyEvt=%d\n", v);
+    if v == 0 then
+        break;               // escapes the loop if v==0
+    end
+end
+return 0;

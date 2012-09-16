@@ -1,0 +1,10 @@
+input void A;
+int v;
+par/and do
+    await A;
+    v = 1;          // non-deterministic access
+with
+    await A;
+    v = 2;          // non-deterministic access
+end
+return v;           // returns 1 or 2

@@ -1,0 +1,13 @@
+input void Hello;
+input void World;
+par do      // par/and, par/or would behave the same
+    loop do
+        await Hello;
+        _printf("Hello!\n");
+    end
+with
+    loop do
+        await World;
+        _printf("World!\n");
+    end
+end
