@@ -1,6 +1,6 @@
 input void TERM;
 par/or do
-    loop do                     // the original loop never terminates
+    loop do                     // the original par/and loop never terminates
         par/and do
             await 100ms;
             _printf("Hello ");

@@ -1,5 +1,7 @@
 emit Hello;
 emit World;
+emit World;
+emit Hello;
 emit Hello;
 emit World;
 emit Hello;

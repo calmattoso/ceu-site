@@ -1,4 +1,4 @@
-int ret = set async do
+int ret = async do
     // calculates fat of 10
     int fat = 1;
     int i = 10;

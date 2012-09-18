@@ -9,30 +9,49 @@ quite simple and easy to grasp.
 </blockquote>
 
 <p>
-Some rules are respected during the execution of programs, 
-the first of which is <span class="label label-info">Synchronous Execution</span>.
+Some rules are respected during the execution of programs, the first of which 
+is the <span class="label label-info">synchronous execution model</span>.
 </p>
 
 <p>
-A program execution is <i>synchronous</i> with respect to input events. This means that while trails 
-are reacting to the current input event, no further events are handled.
+A running program in C&eacute;u is <i>synchronous</i> with respect to input 
+events.
+This means that while trails are reacting to the current input event, no 
+further events are handled in any other trail.
 </p>
 
 <p>
-The period in which trails are reacting to a given input event is named as a <span class="label label-info">reaction chain</span>. 
-A trail only halts (i.e. stops to react) when it awaits again or terminates.
+The period in which trails are reacting to a given input event is named as a 
+<span class="label label-info">reaction chain</span>.  A trail only halts (i.e. 
+stops to react) when it awaits again or terminates.
 </p>
 
 <p>
-In the following example, suppose the event <code>A</code> occurs just before <code>B</code>.
+In the example, suppose the event <code>A</code> occurs just before 
+<code>B</code>.
 </p>
 
 <p>
-Initially, both trails in parallel are awaiting. The occurrence of <code>A</code> awakes the 
-first trail that performs the increment on <code>v</code>. If the event B occurs in the middle 
-of the increment operation, it is delayed until the running reaction chain terminates. 
-Hence, there is no possible race condition on accessing <code>v</code> and, given the sequence <code>A->>B</code>, 
-the only possible result for the program is <code>((0+1)*2)</code>.
+Initially, both trails in parallel are awaiting, and the occurrence of 
+<code>A</code> awakes the first trail that performs the increment on 
+<code>v</code>.
+</p>
+
+<p>
+If the event B occurs during the increment operation, it is enqueued by the 
+C&eactue;u runtime until the running reaction chain terminates to respect the 
+synchronous execution model.
+</p>
+
+<p>
+This way, there is no possible race condition on accessing <code>v</code> and, 
+given the sequence <code>A-&gt;B</code>, the only possible result for the 
+program is <code>2</code> ((0+1)*2).
+</p>
+
+<p>
+Try also to invert the emits in the <span class="label label-info">Input</span> 
+panel and observe the output.
 </p>
 
 <blockquote>
@@ -43,6 +62,11 @@ the only possible result for the program is <code>((0+1)*2)</code>.
 But what if a trail executes endlessly and never halts, 
 how further input events could be handled?
 </p>
+
 <p>
 And what if multiple trails react to the same input event and access the same variables?
+</p>
+
+<p>
+Check the following lessons for answers to these questions.
 </p>

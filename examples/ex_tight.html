@@ -1,11 +1,13 @@
 <p>
 C&eacute;u ensures at compile time that a trail never runs forever, and hence, 
-that reaction chains always run in <span class="label label-info">bounded time</span>.
+that reaction chains always run to completion in <span class="label 
+label-info">bounded time</span>.
 </p>
 
 <p>
-The compiler detects the only way a trail could run in unbounded time: 
-loops that do not await, the so called <i>tight loops</i>.
+The compiler detects and refuses the only way a trails can run in unbounded 
+time: loops that do not await, the so called <span class="label 
+label-info">tight loops</span>.
 </p>
 
 <p>
@@ -15,7 +17,7 @@ the loop bodies have at least one path that does not await:
 
 <pre>
 loop do               // a tight loop
-  nothing;            // `nothing' is a valid statement :)
+  nothing;            // 'nothing' is a valid statement :)
 end
 </pre>
 
@@ -41,18 +43,23 @@ loop do               // a tight loop
 end
 </pre>
 
-<p>As well as the code on the Code Panel.</p>
-
 <blockquote>
 	<p><i>C&eacute;u detects tight loops at compile time!</i></p>
 </blockquote>
 
 <p>
-The code presented on the right is actually useful and it would be a shame if it couldn't be written in C&eacute;u. 
-(see <a href="try.php?sample=ex_async10">Asynchronous Execution</a>)
+The example in the code panel calculates the factorial of <code>10</code>, but 
+contains a tight loop and is also refused. (try it!)
 </p>
 
 <p>
-The tight loop analysis is not extended for external C code. Hence, 
-it is the responsibility of the programmer to ensure that external functions run in bounded time.
+This example is actually useful and it would be a shame if it couldn't be 
+written in C&eacute;u.
+We return to it on <a href="try.php?sample=ex_async10">lesson 19</a>.
+</p>
+
+<p>
+The tight loop analysis is not extended for external C code.
+Hence, it is the responsibility of the programmer to ensure that external 
+functions run in bounded time.
 </p>

@@ -8,6 +8,6 @@ par do
 with
     loop do
         await 250ms;
-        emit i(i+1);    // assigns a new value and triggers `i'
+        emit i(i+1);    // assigns a new value and triggers 'i'
     end
 end

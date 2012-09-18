@@ -1,4 +1,13 @@
 <?php
+    function isset_or ($v, $alt)
+    {
+        if (isset($v)) {
+            return $v;
+        } else {
+            return $alt;
+        }
+    }
+
     function exe ($cmd, $input, &$stdout, &$stderr)
     {
         $dscs = array (
@@ -19,11 +28,11 @@
         return proc_close($p) == 0;
     }
 
-    function ceu ($ceu_code, $dfa, &$stdout, &$stderr)
+    function ceu ($ceu_code, $ana, &$stdout, &$stderr)
     {
-        $cmd = './ceu --m4 --c-calls false -';
-        if ($dfa)
-            $cmd = $cmd . ' --dfa';
+        $cmd = './ceu --m4 --c-calls false - --output -';
+        if ($ana)
+            $cmd = $cmd . ' --analysis_'.$ana;
         return exe($cmd, $ceu_code, $stdout, $stderr);
     }
 
@@ -32,19 +41,23 @@
 $all = <<<XXXX
 #include <stdio.h>
 #include <assert.h>
-typedef long  s32;
-typedef short s16;
-typedef char   s8;
-typedef unsigned long  u32;
-typedef unsigned short u16;
-typedef unsigned char   u8;
+
+#include <stdint.h>
+typedef int64_t  s64;
+typedef int32_t  s32;
+typedef int16_t  s16;
+typedef int8_t    s8;
+typedef uint64_t u64;
+typedef uint32_t u32;
+typedef uint16_t u16;
+typedef uint8_t   u8;
 
 XXXX;
 $all = $all . $c_code;
 $all = $all . <<<XXXX
 int main (int argc, char *argv[])
 {
-    int ret = ceu_go_all();
+    int ret = ceu_go_all(0);
     printf("*** END: %d\\n", ret);
     return ret;
 }
@@ -62,63 +75,89 @@ XXXX;
 
         $input = $_REQUEST['input'];
         if ($input == '') {
-            $input = 'nothing;' ;
+            $all =  $_REQUEST['code'];
+        } else {
+            $all =  ' par/or do' .
+                        $_REQUEST['code'] .
+                    ' with' .
+                        ' async do' .
+                            $input .
+                        ' end' .
+                    ' end' .
+                    ' return 0;';
         }
 
-        $all =  'par/and do ' .
-                    $_REQUEST['code'] .
-                ' with ' .
-                    ' async do ' .
-                        $input .
-                    ' end ' .
-                ' end';
+        $ret = true;
+        $out = '';
+        $err = '';
 
-        $ret = ceu($all, isset($_REQUEST['dfa']), $out_ceu, $err_ceu);
-        $output = $out_ceu;
-        $debug  = $err_ceu;
-
-        if ($ret and $_REQUEST['mode']=='run') {
-            $run_name = 'tmp/'. uniqid('ceu_') . '.exe';
-            if (gcc($out_ceu, $run_name, $out_gcc, $err_gcc)) {
-                exe($run_name, '', $out_run, $err_run);
+        if (isset($_REQUEST['ana'])) {
+            $ret = ceu($all, 'run', $stdout, $stderr);
+            $err = $err . $stderr;
+            if ($ret) {
+                $run_name = 'tmp/'. uniqid('ceu_') . '.exe';
+                $ana = file_get_contents('analysis.c');
+                $ana = preg_replace('/\\#include "_ceu_code\\.cceu"/',
+                             $stdout, $ana);
+                $ret = exe('gcc -xc -std=c99 - -o '.$run_name,
+                            $ana, $stdout, $stderr);
+                $err = $err . $stderr;
+                if ($ret) {
+                    $ret = exe($run_name.' _ceu_analysis.lua',
+                            '', $stdout, $stderr);
+                    $err = $err . $stderr;
+                }
                 unlink($run_name);
-                $output = $out_run;
-                $debug  = $err_ceu . $out_gcc . $err_gcc . $err_run;
-            } else {
-                $output = '';
-                $debug  = $err_ceu . $out_gcc . $err_gcc;
             }
         }
 
-        if ($_REQUEST['new']) {
-            $ip = isset_or($_SERVER['REMOTE_ADDR'],'') . ' | ' .
-                  isset_or($_SERVER['HTTP_X_FORWARDED_FOR'], '') . ' | ' .
-                  isset_or($_SERVER['HTTP_CLIENT_IP'],'');
+        if ($ret)
+        {
+            if (isset($_REQUEST['ana'])) {
+                $ret = ceu($all, 'use', $stdout, $stderr);
+            } else {
+                $ret = ceu($all, false, $stdout, $stderr);
+            }
+            $err = $err . $stderr;
 
-            $body = "=== IP ===\n\n"      . $ip . "\n\n" .
-                    "=== CODE ===\n\n"    . $_REQUEST['code'] . "\n\n" .
-                    "=== INPUT === \n\n"  . $input . "\n\n" .
-                    "=== OUTPUT === \n\n" . $output . "\n\n" .
-                    "=== DEBUG === \n\n"  . $debug . "\n\n" .
-                    "======================================" . "\n\n";
+            if ($ret) {
+                $run_name = 'tmp/'. uniqid('ceu_') . '.exe';
+                $ret = gcc($stdout, $run_name, $stdout, $stderr);
+                $err = $err . $stderr;
 
-            $f = fopen('tmp/TRY.txt', 'a');
-            fwrite($f, $body);
-            fclose($f);
-
-/*
-            $to = "francisco.santanna@gmail.com";
-            $subject = "[try-ceu] new code";
-            if (!mail($to, $subject, $body))
-                error_log("message delivery failed");
-*/
+                if ($ret) {
+                    exe($run_name, '', $stdout, $stderr);
+                    $err = $err . $stderr;
+                    $out = $stdout;
+                    unlink($run_name);
+                }
+            }
         }
 
         $response = array(
-          "output" => htmlspecialchars($output),
-          "debug"  => htmlspecialchars($debug)
+          "output" => htmlspecialchars($out),
+          "debug"  => htmlspecialchars($err)
 				);
-
         echo json_encode($response); 
+
+        $ip = isset_or($_SERVER['REMOTE_ADDR'],'') . ' | ' .
+              isset_or($_SERVER['HTTP_X_FORWARDED_FOR'], '') . ' | ' .
+              isset_or($_SERVER['HTTP_CLIENT_IP'],'');
+
+        $body = "=== IP ===\n\n"      . $ip . "\n\n" .
+                "=== CODE ===\n\n"    . $_REQUEST['code'] . "\n\n" .
+                "=== INPUT === \n\n"  . $input . "\n\n" .
+                "=== OUTPUT === \n\n" . $out . "\n\n" .
+                "=== DEBUG === \n\n"  . $err . "\n\n" .
+                "======================================" . "\n\n";
+
+        $f = fopen('tmp/TRY.txt', 'a');
+        fwrite($f, $body);
+        fclose($f);
+
+        $to = "francisco.santanna@gmail.com";
+        $subject = "[try-ceu] new code";
+        if (!mail($to, $subject, $body))
+            error_log("message delivery failed");
     ?>
 <?php endif; ?>

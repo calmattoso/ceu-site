@@ -1,9 +1,9 @@
 @define(AWAIT_COND, `
-set do
+do
     loop do
-        int v = await $1;
-        if v $2 $3 then
-            return v;
+        int v1 = await $1;
+        if v1 $2 $3 then
+            return v1;
         end
     end
 end

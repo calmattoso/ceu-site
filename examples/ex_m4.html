@@ -1,16 +1,21 @@
 <p>
-C&eacute;u source files can be optionally preprocessed with <a href="//www.gnu.org/software/m4/">m4</a>,
- which offers similar functionality to the C preprocessor.
+C&eacute;u source files can be optionally preprocessed with <a 
+ href="//www.gnu.org/software/m4/"><span class="label 
+label-info">m4</span></a>, providing a similar functionality to the C 
+preprocessor.
 </p>
 
 <p>
-Moreover, <span class="label label-info">m4</span> can be used to substitute arbitrary code, 
-providing a powerful mechanism for creating <span class="label label-info">abstractions</span> in C&eacute;u.
+Moreover, <span class="label label-info">m4</span> can also be used to 
+substitute blocks of code, providing a powerful mechanism for creating <span 
+class="label label-info">abstractions</span> in C&eacute;u.
 </p>
 
 <p>
-This example defines the macro <code>AWAIT_COND</code> that loops until the value of an event satisfies a condition. 
-The event name, condition operator, and expected value should be passed as arguments to the macro.
+This example defines the macro <code>AWAIT_COND</code> that loops until the 
+value of an event satisfies a condition.  The event name (<code>$1</code>), 
+condition operator (<code>$2</code>), and expected value (<code>$3</code>) 
+should be passed as arguments to the macro.
 </p>
    
 <p>
@@ -18,12 +23,14 @@ The two occurrences <code>AWAIT_COND</code> in the source code are expanded to t
 </p>
 
 <p>
-In <code>m4</code>, the command <code>define</code> is used to define a new macro. 
-The symbols <code>`</code> and <code>'</code> are used to enclose tokens that contain spaces and special characters.
+In <span class="label label-info">m4</span>, command <code>define</code> is 
+used to define a new macro, and symbols <code>`</code> and <code>'</code> are 
+used to enclose tokens that contain spaces and special characters.
 </p>
 
 <p>
-In C&eacute;u, the token <code>@</code> is ignored by the parser and is used to highlight the use of macros.
+In C&eacute;u, the token <code>@</code> is ignored by the parser and is used to 
+highlight the use of a macro.
 </p>
 
 <blockquote>

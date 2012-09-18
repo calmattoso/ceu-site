@@ -4,6 +4,11 @@ non-deterministic access to variables, raising a warning if it is the case.
 </p>
 
 <p>
-In this example, although <code>v</code> is accessed in both trails on the occurrence of <code>A</code>, 
-they never happen at the same time.
+Note in this example that, although both trails access <code>v</code> on the 
+occurrence of <code>A</code>, they can never happen at the same time.
+</p>
+
+<p>
+The static analysis correctly identifies this example as deterministic and does 
+not raise a warning.
 </p>

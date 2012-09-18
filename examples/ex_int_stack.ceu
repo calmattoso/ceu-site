@@ -3,17 +3,17 @@ event void e;           // an internal event that carries no value
 int v = 0;
 par do
     loop do             // a simple loop that
-        await e;        // when `e' occurs
-        v = v + 1;      // increments `v'
+        await e;        // when 'e' occurs
+        v = v + 1;      // increments 'v'
     end
 with
     await Start;
 
-    // 1st trail is awaiting `e'
+    // 1st trail is awaiting 'e'
     emit e;             // halts and resumes after 1st trail halts
                         // v=0+1 => 1
 
-    // 1st trail is awaiting `e' again
+    // 1st trail is awaiting 'e' again
     emit e;             // halts and resumes after 1st trail halts
                         // v=1+1 => 2
 

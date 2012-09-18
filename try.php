@@ -12,16 +12,16 @@
       "name" => "Input Events"
     ),
     "ex_parand" => array(
-      "name" => "Parallel Compositions: Par/And"
+      "name" => "Parallel Compositions: par/and"
     ),
     "ex_paror" => array(
-      "name" => "Parallel Compositions: Par/Or"
+      "name" => "Parallel Compositions: par/or"
     ),
     "ex_term" => array(
-      "name" => "Parallel Compositions: TERM"
+      "name" => "Parallel Compositions: mixing"
     ),
     "ex_par" => array(
-      "name" => "Parallel Compositions: Par"
+      "name" => "Parallel Compositions: par"
     ), 
     "ex_AB" => array(
       "name" => "Execution Model: Synchronous Execution"
@@ -168,7 +168,7 @@
           };
           
           if($("#ceu-code input").prop("checked")){
-            request.dfa = 'on';
+            request.ana = 'on';
           }
           
           // Get the CODE and INPUT entered by the user (the user might have modified both)
@@ -217,9 +217,10 @@
   </head>
   <body>
     <div id="ceu-title">
-      <h3> 
-        <a href="index.html"><img src="img/ceu.png"></a> 
-        [<span class="ceu-text"> Try Online </span>]
+      <h3>
+        <a href="index.html"><img src="img/ceu.png"></a>
+        <!--<blink>&nbsp;&nbsp;&nbsp;under maintenance!</blink>-->
+        <!--[<span class="ceu-text"> Try Online </span>]-->
       </h3>
     </div> 
     <div id="ceu-body">

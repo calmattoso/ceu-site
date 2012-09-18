@@ -4,11 +4,12 @@ C do
     }
 
     typedef struct {
-        int a;
-        int b;
+        s16 a;
+        s16 b;
     } mystruct;
 end
 
+type _mystruct = 4;
 _mystruct s;
 _mystruct* ps = &s;
 s.a = 10;
