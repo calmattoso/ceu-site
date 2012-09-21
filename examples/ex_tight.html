@@ -17,7 +17,7 @@ the loop bodies have at least one path that does not await:
 
 <pre>
 loop do               // a tight loop
-  nothing;            // 'nothing' is a valid statement :)
+  // nothing
 end
 </pre>
 
@@ -28,7 +28,7 @@ loop do             // a tight loop
   par/or do
     await A;
   with
-    nothing;        // this path does not await
+    // nothing      // this path does not await
   end
 end
 </pre>

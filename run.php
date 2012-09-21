@@ -30,7 +30,7 @@
 
     function ceu ($ceu_code, $ana, &$stdout, &$stderr)
     {
-        $cmd = './ceu --m4 --c-calls false - --output -';
+        $cmd = "./ceu --m4 --c-calls '_printf _assert _soma' - --output -";
         if ($ana)
             $cmd = $cmd . ' --analysis_'.$ana;
         return exe($cmd, $ceu_code, $stdout, $stderr);
