@@ -135,6 +135,17 @@
           $("#ceu-index-modal").modal("hide");
         });
         
+        // Clicking on the INCREASE or DECREASE font size buttons
+         $("#ceu-font-controls .btn").click(function(){
+          if($(this).attr("id") === "ceu-font-increase"){
+            change_font_size(2);
+          }
+          else {
+            change_font_size(-2);
+          }    
+        });
+        
+        
         // Clicking on NEXT or PREVIOUS buttons
         $("#ceu-slide .pull-right .btn").click(function(){
           if($(this).attr("id") === "ceu-next"){
@@ -158,7 +169,7 @@
           var $results_panel = $("#ceu-results-text").empty();
 
           // tell the user we're waiting for the remote server
-          $results_panel.html("<p class='lead'>Compilling and running code...</p>");
+          $results_panel.html("<p class='lead'>Compiling and running code...</p>");
 
           // Construct the object that will be sent with the code to be compiled/executed
           var request = {
@@ -201,7 +212,7 @@
         var first_slide_id = <?php
           if(isset($_REQUEST['sample'], $lessons[$_REQUEST['sample']])){
             echo "'" . $_REQUEST['sample'] . "'";
-          }
+            }
           else {
             echo "'ex_intro'";
           }        
@@ -216,13 +227,6 @@
     </script>
   </head>
   <body>
-    <div id="ceu-title">
-      <h3>
-        <a href="index.html"><img src="img/ceu.png"></a>
-        <!--<blink>&nbsp;&nbsp;&nbsp;under maintenance!</blink>-->
-        <!--[<span class="ceu-text"> Try Online </span>]-->
-      </h3>
-    </div> 
     <div id="ceu-body">
       <div>
         <!-- Left columns -->
@@ -230,13 +234,19 @@
           <div id="ceu-slide">
             <div class="relative">
               <div class="ceu-textbar">
-                <button type="button" class="btn btn-small" data-toggle="modal" data-target="#ceu-index-modal">
+                <a href="index.html"><img src="img/ceu.png"></a>
+                <button type="button" class="btn btn-small" data-toggle="modal" data-target="#ceu-index-modal" title="View Table of Contents">
                   <i class="icon-list"></i> Index
                 </button>
+                <span id="ceu-font-controls">
+                  <button id="ceu-font-decrease" class="btn btn-mini" alt="Decrease font size." title="Decrease font size"><i class="icon-minus-sign"></i></button>
+                  Font Size 
+                  <button id="ceu-font-increase" class="btn btn-mini" alt="Increase font size." title="Increase font size"><i class="icon-plus-sign"></i></button>
+                </span>
                 <span class="pull-right">
-                  <button id="ceu-left" type="button" class="btn btn-small">Previous</button>
+                  <button id="ceu-left" type="button" class="btn btn-small" title="Previous lesson">Previous</button>
                   <span id="ceu-slide-number">1</span>
-                  <button id="ceu-next" type="button" class="btn btn-small">Next</button>
+                  <button id="ceu-next" type="button" class="btn btn-small" title="Next lesson">Next</button>
                 </span>
               </div>
               <div id="ceu-slide-text">
@@ -263,11 +273,11 @@
               <div class="ceu-textbar">
                 Code
                 <div class="pull-right">
-                  <input id="ceu-static" style="margin-top: -2px;" type="checkbox" name="debug" value="static_analysis" /> 
+                  <input id="ceu-static" style="margin-top: -2px;font-size:14px" type="checkbox" name="debug" value="static_analysis" /> 
                     <label style="display:inline;" for="ceu-static">static analysis</label>
                   </input>&nbsp;&nbsp;
-                  <button id="ceu-reset" type="button" class="btn btn-small">Reset</button>
-                  <button id="ceu-run"   type="button" class="btn btn-small btn-primary">Run <i class="icon-play-circle icon-white"></i></button>
+                  <button id="ceu-reset" type="button" class="btn btn-small" title="Reset lesson">Reset</button>
+                  <button id="ceu-run"   type="button" class="btn btn-small btn-primary" title="Compile and execute code">Run <i class="icon-play-circle icon-white"></i></button>
                 </div>
               </div>
               <div id="ceu-code-container">
@@ -285,15 +295,6 @@
           </div>
         </div>
       </div>
-    </div>
-    
-    <!-- Footer -->
-    <div id="ceu-footer">
-       <a href="index.html">Home</a> - 
-       <span class="ceu-text">Try C&eacute;u Online</span> - 
-       <a href="./wiki/">C&eacute;upedia (The Docs)</a> - 
-       <a href="./wiki/index.php?title=C%C3%A9u_in_a_Box">Get C&eacute;u in a Box (Virtual Machine)</a> -
-       <a href="//www.github.com/fsantanna/ceu/">Get C&eacute;u on Github</a>       
     </div>
     
     <!-- Modals -->

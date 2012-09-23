@@ -39,6 +39,10 @@ function update_number(lesson_num){
   Slides.cur_slide = lesson_num;
 }
 
+function clear_results(){
+  $("#ceu-results-text").empty();
+}
+
 // Object used to load a new lesson; it holds also holds the [lesson_id -> numeric_id] array
 var Slides = {
   cur_slide: 1,
@@ -74,5 +78,18 @@ function load_lesson(index){
   update_number(index);
   load_text(lesson_id);
   load_code(lesson_id);
-  load_input(lesson_id);    
-}    
+  load_input(lesson_id); 
+  clear_results();
+}  
+
+// Increase/decrease font size by diff px
+function change_font_size(diff){
+  var $body = $('body'),
+      cur_font_size = $body.css('font-size');
+  
+  cur_font_size = parseFloat(cur_font_size, 10) + diff;
+  
+  if(cur_font_size > 0){
+    $body.css('font-size', cur_font_size);
+  }
+}

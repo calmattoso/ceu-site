@@ -25,40 +25,38 @@ textarea {
 	background-color: #F8F8F8;
 }
 
-#ceu-slide, #ceu-results, #ceu-code, #ceu-input, #ceu-footer {
+#ceu-slide, #ceu-results, #ceu-code, #ceu-input {
 	position: absolute;
+  font-size: 100%;  
 }
 
 /* Left column */
-#ceu-title {
-	margin-top: -10px;
-	padding-left: 10px;
-	border-bottom: 1px solid #DDD;
-	height: 50px;
-	-moz-box-shadow: 0 5px 21px 1px #EEE;
-	-webkit-box-shadow: 0 5px 21px 1px #EEE;
-	box-shadow: 0 5px 21px 1px #EEE	;
-}
-
-#ceu-title img {
-	padding-top: 0px;
-	width: 100px;
-}
-
 #ceu-tutorial {
-	border-right: 2px solid #DDD	;
+	border-right: 2px solid #DDD;
 	border-left: 2px solid #EEE;
 }
 
 #ceu-slide {
-	top: 51px;
+	top: 0px;
 	left: 0px;
-	bottom: 50%;
+	bottom: 45%;
 	right: 55%;
 }
 
 #ceu-slide  div.ceu-textbar {
 	line-height: 30px;
+}
+
+#ceu-slide  div.ceu-textbar  img{
+	height: 30px;
+  margin-right: 10px;
+  margin-top: -6px;
+}
+
+#ceu-slide div.ceu-textbar span#ceu-font-controls   {
+  font-size: 14px;
+  position: absolute;
+  left: 40%;
 }
 
 #ceu-slide div.ceu-textbar  #ceu-slide-number {
@@ -91,9 +89,9 @@ textarea {
 }
 
 #ceu-results	 {
-	top: 50%;
+	top: 55%;
 	left: 0px;
-	bottom: 27px;
+	bottom: 0px;
 	right: 55%;
 	border-top: 2px solid #EEE;
 }
@@ -120,9 +118,9 @@ textarea {
 }
 
 #ceu-code {
-	top: 51px;
+	top: 0px;
 	left: 45%;
-	bottom: 30%;
+	bottom: 45%;
 	right: 0px;
 	border-left: 1px solid #EEE;
 }
@@ -160,16 +158,16 @@ textarea {
 	padding: 0px;
 	width: 100%;
 	height: 100%;
-    font-family: "Courier New", "Ubuntu";
-    font-size: medium;
-    padding-top: 5px;
+  font-family: "Courier New", "Ubuntu";
+  font-size: 114%;
+  padding-top: 5px;
 	padding-left: 5px;
 }
 
 #ceu-input	 {
-	top: 70%;
+	top: 55%;
 	left: 45%;
-	bottom: 27px;
+	bottom: 0px;
 	right: 0px;
 	border-left: 1px solid #EEE;
 	border-top: 2px solid #EEE;
@@ -194,16 +192,6 @@ textarea {
 	height: 100%;
 	border: 0px;
 	padding-bottom: 0px;
-}
-
-#ceu-footer {
-	width: 99.295%;
-	padding-left: 10px;
-	padding-top: 2px;
-	border-top: 1px solid #DDD;
-	border-bottom: 4px solid #F8F8F8;
-	height: 20px;
-	bottom: 0px;
 }
 
 /* Céu specific and utility classes */
