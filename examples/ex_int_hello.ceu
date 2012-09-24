@@ -1,4 +1,4 @@
-// internal event (variable) identifiers begin in lowercase
+// internal event (variable) ids begin in lowercase
 event int i = 0;
 par do
     loop do
@@ -8,6 +8,6 @@ par do
 with
     loop do
         await 250ms;
-        emit i(i+1);    // assigns a new value and triggers 'i'
+        emit i(i+1);    // assigns and triggers 'i'
     end
 end

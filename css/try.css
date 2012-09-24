@@ -39,8 +39,8 @@ textarea {
 #ceu-slide {
 	top: 0px;
 	left: 0px;
-	bottom: 45%;
-	right: 55%;
+	bottom: 35%;
+	right: 45%;
 }
 
 #ceu-slide  div.ceu-textbar {
@@ -89,7 +89,7 @@ textarea {
 }
 
 #ceu-results	 {
-	top: 55%;
+    top: 65%;
 	left: 0px;
 	bottom: 0px;
 	right: 55%;
@@ -119,8 +119,8 @@ textarea {
 
 #ceu-code {
 	top: 0px;
-	left: 45%;
-	bottom: 45%;
+	left: 55%;
+	bottom: 35%;
 	right: 0px;
 	border-left: 1px solid #EEE;
 }
@@ -165,8 +165,8 @@ textarea {
 }
 
 #ceu-input	 {
-	top: 55%;
-	left: 45%;
+    top: 65%;
+	left: 55%;
 	bottom: 0px;
 	right: 0px;
 	border-left: 1px solid #EEE;

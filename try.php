@@ -235,18 +235,18 @@
             <div class="relative">
               <div class="ceu-textbar">
                 <a href="index.html"><img src="img/ceu.png"></a>
-                <button type="button" class="btn btn-small" data-toggle="modal" data-target="#ceu-index-modal" title="View Table of Contents">
-                  <i class="icon-list"></i> Index
-                </button>
                 <span id="ceu-font-controls">
                   <button id="ceu-font-decrease" class="btn btn-mini" alt="Decrease font size." title="Decrease font size"><i class="icon-minus-sign"></i></button>
-                  Font Size 
+                  Font
                   <button id="ceu-font-increase" class="btn btn-mini" alt="Increase font size." title="Increase font size"><i class="icon-plus-sign"></i></button>
                 </span>
                 <span class="pull-right">
-                  <button id="ceu-left" type="button" class="btn btn-small" title="Previous lesson">Previous</button>
+                <button type="button" class="btn btn-small" data-toggle="modal" data-target="#ceu-index-modal" title="View Table of Contents">
+                  <i class="icon-list"></i> Index
+                </button>
+                  <button id="ceu-left" type="button" class="btn btn-small" title="Previous lesson">&lt;</button>
                   <span id="ceu-slide-number">1</span>
-                  <button id="ceu-next" type="button" class="btn btn-small" title="Next lesson">Next</button>
+                  <button id="ceu-next" type="button" class="btn btn-small" title="Next lesson">&gt;</button>
                 </span>
               </div>
               <div id="ceu-slide-text">

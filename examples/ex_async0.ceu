@@ -14,7 +14,7 @@ par/or do
         return fat;
     end;
 with
-    await 1s;       // watchdog to kill the async if it takes too long
+    await 1s;  // kill the async if it takes long
     ret = 0;
 end
 return ret;
