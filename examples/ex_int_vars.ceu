@@ -1,4 +1,5 @@
-input int Start;
+C _printf();
+input int START;
 event int v1, v2;
 par do
     loop do
@@ -12,7 +13,7 @@ with
     end
 with
     // tests the constraint
-    await Start;
+    await START;
     emit v1(2);         // use 'emit' instead of '='
     _printf("v1=%2d   v2=%2d\n", v1, v2);
     emit v2(12);

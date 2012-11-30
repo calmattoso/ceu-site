@@ -1,4 +1,4 @@
-int v = 0;
+var int v = 0;
 par/or do
     loop do
         await 10ms;

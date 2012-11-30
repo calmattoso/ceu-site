@@ -1,9 +1,9 @@
-int ret;
+var int ret;
 par/or do
     ret = async do
         // calculates fat of 10
-        int fat = 1;
-        int i = 10;
+        var int fat = 1;
+        var int i = 10;
         loop do
             if i == 0 then
                 break;

@@ -1,5 +1,5 @@
 input void A, B;
-int v = 0;
+var int v = 0;
 par/and do
     await A;        // first trail
     v = v + 1;

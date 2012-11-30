@@ -1,13 +1,13 @@
-input int Start;
+input int START;
 event void e;      // an event carrying no values
-int v = 0;
+var int v = 0;
 par do
     loop do        // a simple loop that
         await e;   // when 'e' occurs
         v = v + 1; // increments 'v'
     end
 with
-    await Start;
+    await START;
 
     // 1st trail is awaiting 'e'
     emit e;        // resumes after 1st trail halts

@@ -1,5 +1,5 @@
 input void A;
-int v;
+var int v;
 par/and do
     await A;
     v = 1;          // deterministic access

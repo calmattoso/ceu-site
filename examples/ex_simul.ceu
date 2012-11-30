@@ -1,9 +1,10 @@
 // tests a program with a simulation in parallel
+C _printf();
 par do
 
     // original code
     input int A;
-    int v = await A;
+    var int v = await A;
     loop do
         await 10ms;
         _printf("v = %d\n", v);

@@ -1,15 +1,16 @@
-int ret = async do
-    // calculates the sum from 1..100
-    int sum = 0;
-    int i = 1;
-    loop do
-        sum = sum + i;
-        if i == 100 then
-            break;
-        else
-            i = i + 1;      // this path does not await or break
+var int ret =
+    async do
+        // calculates the sum from 1..100
+        var int sum = 0;
+        var int i = 1;
+        loop do
+            sum = sum + i;
+            if i == 100 then
+                break;
+            else
+                i = i + 1;      // this path does not await or break
+            end
         end
-    end
-    return sum;
-end;
+        return sum;
+    end;
 return ret;

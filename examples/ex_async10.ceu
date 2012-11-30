@@ -1,14 +1,15 @@
-int ret = async do
-    // calculates fat of 10
-    int fat = 1;
-    int i = 10;
-    loop do
-        if i == 1 then
-            break;
+var int ret =
+    async do
+        // calculates fat of 10
+        var int fat = 1;
+        var int i = 10;
+        loop do
+            if i == 1 then
+                break;
+            end
+            fat = fat * i;
+            i = i - 1;
         end
-        fat = fat * i;
-        i = i - 1;
-    end
-    return fat;
-end;
+        return fat;
+    end;
 return ret;

@@ -1,4 +1,4 @@
-int v1=0, v2=0;
+var int v1=0, v2=0;
 par/or do
     v1 = 1;         // priority=2
 with

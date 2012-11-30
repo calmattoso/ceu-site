@@ -1,3 +1,4 @@
+C _printf();
 loop do
     par/or do
         await 100ms;

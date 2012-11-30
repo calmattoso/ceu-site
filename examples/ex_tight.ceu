@@ -1,6 +1,6 @@
 // calculates fat of 10
-int fat = 1;
-int i = 10;
+var int fat = 1;
+var int i = 10;
 loop do             // a tight loop
     if fat == 0 then
         break;

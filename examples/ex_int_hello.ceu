@@ -1,5 +1,6 @@
 // internal event (variable) ids begin in lowercase
 event int i = 0;
+C _printf();
 par do
     loop do
         await i;        // waits for changes

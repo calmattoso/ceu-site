@@ -1,7 +1,7 @@
 @define(AWAIT_COND, `
 do
     loop do
-        int v1 = await $1;
+        var int v1 = await $1;
         if v1 $2 $3 then
             return v1;
         end
@@ -9,15 +9,16 @@ do
 end
 ')
 
+C _printf();
 input int A, B;
 
 par/or do
     loop do
-        int v = @AWAIT_COND(A, `>=', 5);
+        var int v = @AWAIT_COND(A, `>=', 5);
         _printf("A = %d\n", v);
     end
 with
-    int v = @AWAIT_COND(B, `==', 0);
+    var int v = @AWAIT_COND(B, `==', 0);
 end
 
 return 0;
