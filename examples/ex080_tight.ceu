@@ -2,7 +2,7 @@
 var int fat = 1;
 var int i = 10;
 loop do             // a tight loop
-    if fat == 0 then
+    if i == 0 then
         break;
     end
     fat = fat * i;

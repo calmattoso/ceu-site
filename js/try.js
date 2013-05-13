@@ -47,9 +47,17 @@ function clear_results(){
 var Slides = {
   cur_slide: 1,
   slides: [
-    "ex_intro", "ex_hello", "ex_events", "ex_parand", "ex_paror", "ex_term", "ex_par", "ex_AB", "ex_tight", 
-    "ex_det01", "ex_det02", "ex_det03", "ex_det04", "ex_atomic", "ex_glitch", "ex_int_hello", 
-    "ex_int_vars", "ex_int_stack", "ex_async10", "ex_async0", "ex_simul", "ex_cblock", "ex_m4"
+    "ex000_intro",   "ex010_hello",    "ex020_events",   "ex030_parand",
+    "ex040_paror",   "ex050_term",     "ex060_par",      "ex070_AB",
+    "ex080_tight",   "ex090_det01",    "ex120_inthello", "ex140_intstack",
+    "ex150_async10", "ex160_async0",   "ex170_simul",    "ex180_cblock",
+/*
+    "ex190_fin",
+    "ex130_intvars",
+    "ex100_atomic",
+ "ex_det02", "ex_det03", "ex_det04",
+ "ex_glitch", "ex_m4"
+*/
   ],
   next: function(){
     this.cur_slide++;

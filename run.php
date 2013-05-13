@@ -15,7 +15,7 @@
             1 => array("pipe", "w"),  // stdout
             2 => array("pipe", "w"),  // stderr
         );
-        $p = proc_open('nice -n19 ./timeout -k9 10s '.$cmd,
+        $p = proc_open('nice -n19 ./timeout -k9 1s '.$cmd,
                 $dscs, $pipes, null, null);
         //$p = proc_open($cmd, $dscs, $pipes, null, null);
         fwrite($pipes[0], $input);
@@ -28,11 +28,9 @@
         return proc_close($p) == 0;
     }
 
-    function ceu ($ceu_code, $ana, &$stdout, &$stderr)
+    function ceu ($ceu_code, &$stdout, &$stderr)
     {
-        $cmd = "./ceu --m4 --c-calls '_printf _assert _soma' - --output -";
-        if ($ana)
-            $cmd = $cmd . ' --analysis_'.$ana;
+        $cmd = "./ceu --m4 --c-calls '_printf _assert _inc' - --output -";
         return exe($cmd, $ceu_code, $stdout, $stderr);
     }
 
@@ -52,18 +50,23 @@ typedef uint32_t u32;
 typedef uint16_t u16;
 typedef uint8_t   u8;
 
+int ret_end=0, ret_val;
+#define ceu_out_end(v) { ret_end=1; ret_val=v; }
+
 XXXX;
 $all = $all . $c_code;
 $all = $all . <<<XXXX
+
 int main (int argc, char *argv[])
 {
-    int ret = ceu_go_all(0);
-    printf("*** END: %d\\n", ret);
-    return ret;
+    ceu_go_all(&ret_end);
+    printf("*** END: %d\\n", ret_val);
+    return ret_val;
 }
 
 XXXX;
-        return exe('gcc -xc -std=c99 - -o'.$run_name, $all, $stdout, $stderr);
+        // TODO: -ansi
+        return exe('gcc -xc - -o'.$run_name, $all, $stdout, $stderr);
     }
 ?>
 
@@ -77,13 +80,13 @@ XXXX;
         if ($input == '') {
             $all =  $_REQUEST['code'];
         } else {
-            $all =  ' par/or do' .
+            $all =  ' par/or do ' .
                         $_REQUEST['code'] .
-                    ' with' .
-                        ' async do' .
+                    ' with ' .
+                        ' async do ' .
                             $input .
-                        ' end' .
-                    ' end' .
+                        ' end ' .
+                    ' end ' .
                     ' return 0;';
         }
 
@@ -91,33 +94,9 @@ XXXX;
         $out = '';
         $err = '';
 
-        if (isset($_REQUEST['ana'])) {
-            $ret = ceu($all, 'run', $stdout, $stderr);
-            $err = $err . $stderr;
-            if ($ret) {
-                $run_name = 'tmp/'. uniqid('ceu_') . '.exe';
-                $ana = file_get_contents('analysis.c');
-                $ana = preg_replace('/\\#include "_ceu_code\\.cceu"/',
-                             $stdout, $ana);
-                $ret = exe('gcc -xc -std=c99 - -o '.$run_name,
-                            $ana, $stdout, $stderr);
-                $err = $err . $stderr;
-                if ($ret) {
-                    $ret = exe($run_name.' _ceu_analysis.lua',
-                            '', $stdout, $stderr);
-                    $err = $err . $stderr;
-                }
-                unlink($run_name);
-            }
-        }
-
         if ($ret)
         {
-            if (isset($_REQUEST['ana'])) {
-                $ret = ceu($all, 'use', $stdout, $stderr);
-            } else {
-                $ret = ceu($all, false, $stdout, $stderr);
-            }
+            $ret = ceu($all, $stdout, $stderr);
             $err = $err . $stderr;
 
             if ($ret) {

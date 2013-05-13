@@ -5,14 +5,14 @@ label-info">bounded time</span>.
 </p>
 
 <p>
-The compiler detects and refuses the only way a trails can run in unbounded 
-time: loops that do not await, the so called <span class="label 
-label-info">tight loops</span>.
+The compiler detects and <i>warns</i> when trails can run in unbounded time: 
+loops that do not await, the so called <span class="label label-info">tight 
+loops</span>.
 </p>
 
 <p>
-In the following examples, which are all refused at compile time, 
-the loop bodies have at least one path that does not await:
+In the following examples, which all issue warnings at compile time, the loop 
+bodies have at least one path that does not await:
 </p>
 
 <pre>
@@ -49,12 +49,9 @@ end
 
 <p>
 The example in the code panel calculates the factorial of <code>10</code>, but 
-contains a tight loop and is also refused. (try it!)
-</p>
-
+contains a tight loop and a warning is issued.
 <p>
-This example is actually useful and it would be a shame if it couldn't be 
-written in C&eacute;u.
+The example is actually useful and can be written in C&eacute;u in a safer way.
 We return to it on <a href="try.php?sample=ex_async10">lesson 19</a>.
 </p>
 

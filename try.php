@@ -2,36 +2,37 @@
 <?     
   // Object that holds all information (name, code, input, lesson html) for each lesson
   $lessons = array(
-    "ex_intro" => array(
+    "ex000_intro" => array(
       "name" => 'Welcome to C&eacute;u!'
     ),
-    "ex_hello" => array(
+    "ex010_hello" => array(
       "name" => "Hello World!"
-    ), 
-    "ex_events" => array(
+    ),
+    "ex020_events" => array(
       "name" => "Input Events"
     ),
-    "ex_parand" => array(
+    "ex030_parand" => array(
       "name" => "Parallel Compositions: par/and"
     ),
-    "ex_paror" => array(
+    "ex040_paror" => array(
       "name" => "Parallel Compositions: par/or"
     ),
-    "ex_term" => array(
+    "ex050_term" => array(
       "name" => "Parallel Compositions: mixing"
     ),
-    "ex_par" => array(
+    "ex060_par" => array(
       "name" => "Parallel Compositions: par"
-    ), 
-    "ex_AB" => array(
+    ),
+    "ex070_AB" => array(
       "name" => "Execution Model: Synchronous Execution"
     ),
-    "ex_tight" => array(
+    "ex080_tight" => array(
       "name" => "Execution Model: Bounded Execution"
     ),
-    "ex_det01" => array(
-      "name" => "Execution Model: Deterministic Execution 1"
+    "ex090_det01" => array(
+      "name" => "Execution Model: Deterministic Execution"
     ),
+/*
     "ex_det02" => array(
       "name" => "Execution Model: Deterministic Execution 2"
     ),
@@ -40,37 +41,44 @@
     ),
     "ex_det04" => array(
       "name" => "Execution Model: Deterministic Execution 4"
-    ), 
-    "ex_atomic" => array(
+    ), "ex100_atomic" => array(
       "name" => "Execution Model: Atomic Execution"
     ),
-    "ex_glitch" => array(
+    "ex110_glitch" => array(
       "name" => "Execution Model: Glitch-free Execution"
     ),
-    "ex_int_hello" => array(
+*/
+    "ex120_inthello" => array(
       "name" => "Internal Events"
     ),
-    "ex_int_vars" => array(
+/*
+    "ex130_intvars" => array(
       "name" => "Internal Events: Reactive Variables"
     ),
-    "ex_int_stack" => array(
+*/
+    "ex140_intstack" => array(
       "name" => "Internal Events: Stacked Execution"
-    ), 
-    "ex_async10"  => array(
+    ),
+    "ex150_async10"  => array(
       "name" => "Asynchronous Execution 1"
     ),
-    "ex_async0" => array(
+    "ex160_async0" => array(
       "name" => "Asynchronous Execution 2"
-    ), 
-    "ex_simul" => array(
+    ),
+    "ex170_simul" => array(
       "name" => "Simulation"
     ),
-    "ex_cblock" => array(
+    "ex180_cblock" => array(
       "name" => "C Definitions"
     ),
-    "ex_m4" => array(
+/*
+    "ex190_fin" => array(
+      "name" => "Finalization"
+    ),
+    "ex190_m4" => array(
       "name" => "Abstractions with m4"
     ),
+*/
     // Used to avoid a weird bug when generating the modal
     // Without this, the last lesson would be printed with 
     // the name of the previous one.
@@ -204,7 +212,7 @@
         });
         
         // For some reason the code for the intro lesson is not being loaded
-        Lessons.ex_intro['code'] = '/* Have fun with Ceu ! */\n return 0;';
+        Lessons.ex000_intro['code'] = '/* Have fun with Ceu ! */\n return 0;';
         
         // Selection of the first slide to be loaded:
         // -- User specified one: ?sample=<value>
@@ -214,7 +222,7 @@
             echo "'" . $_REQUEST['sample'] . "'";
             }
           else {
-            echo "'ex_intro'";
+            echo "'ex000_intro'";
           }        
         ?>;
         
@@ -235,6 +243,7 @@
             <div class="relative">
               <div class="ceu-textbar">
                 <a href="index.html"><img src="img/ceu.png"></a>
+<!-- <blink>UNDER MAINTENANCE</blink> -->
                 <span id="ceu-font-controls">
                   <button id="ceu-font-decrease" class="btn btn-mini" alt="Decrease font size." title="Decrease font size"><i class="icon-minus-sign"></i></button>
                   Font
@@ -273,10 +282,7 @@
               <div class="ceu-textbar">
                 Code
                 <div class="pull-right">
-                  <input id="ceu-static" style="margin-top: -2px;font-size:14px" type="checkbox" name="debug" value="static_analysis" /> 
-                    <label style="display:inline;" for="ceu-static">static analysis</label>
-                  </input>&nbsp;&nbsp;
-                  <button id="ceu-reset" type="button" class="btn btn-small" title="Reset lesson">Reset</button>
+                  <button id="ceu-reset" type="button" class="btn btn-small" title="Reset lesson"> Reset</button>
                   <button id="ceu-run"   type="button" class="btn btn-small btn-primary" title="Compile and execute code">Run <i class="icon-play-circle icon-white"></i></button>
                 </div>
               </div>

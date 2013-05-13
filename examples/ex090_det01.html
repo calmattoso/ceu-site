@@ -15,7 +15,13 @@ occurrence of <code>A</code>.
 </p>
 
 <p>
-Before running the program, click the <span class="label label-info">static 
-analysis</span> checkbox and read the message in the <span class="label 
+When running the program, read the message in the <span class="label 
 label-info">Debug</span> output.
 </p>
+
+Even tough the compiler warns about the suspicious accesses to <code>v</code>, 
+the scheduler of Céu always awakes the trail that appears first in the program 
+text.
+This way, the first trails resumes, assigns <code>1</code> and halts;
+then the second trail resumes and assigns <code>2</code>.
+The final result is always <code>2</code>.
