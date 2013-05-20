@@ -43,34 +43,49 @@
 
 </div>
 </div>
-<hr class="ceu-hr">
 </div>
 
 <div id="ceu-walkthrough" class="container">
 
 <div class="row">
-    <div class="span6 hero-unit">
-        <h1>What is <span class="ceu-text">C&eacute;u</span>?</h1>
-        <p><br/>C&eacute;u is a <span class="ceu-text"><strong>reactive 
-        language</strong></span> targeted at embedded systems and intended to
-        offer a higher-level and safer alternative to C.
+    <div class="span12 hero-unit">
+        <!--<h1>What is <span class="ceu-text">C&eacute;u</span>?</h1>-->
+        <h2><i><span class="ceu-text">C&eacute;u</span> is a reactive 
+        programming language that offers a safer and higher-level alternative 
+to C.</i></h2>
     </div>
-    <div class="span4">
+</div>
+
+<div class="row">
+    <br/>
+</div>
+
+<div class="row">
+    <div class="span6">
         <h4>This is how <span class="ceu-text">C&eacute;u</span> looks 
         like:</h4>
         <pre class="ceu-code">
-<b>input</b> int Key;
+<b>input</b> int KEY;
 <b>par/or</b> <b>do</b>
-    <b>loop</b> <b>do</b>
-        <b>await</b> 1s;
+    <b>every</b> 1s <b>do</b>
         _printf("Hello World!\n");
     <b>end</b>
 <b>with</b>
-    <b>await</b> Key;
+    <b>await</b> KEY;
 <b>end</b>
 </pre>
     <i><small>(Prints the "Hello World!" message every second, terminating on a 
     key press.)</small></i>
+    </div>
+    <div class="span6">
+        <iframe width="420" height="315"
+            src="http://www.youtube.com/embed/W3Bl9hsoc3s?rel=0&hd=1" 
+            frameborder="0" allowfullscreen>
+        </iframe><br/>
+        See more introductory videos in this
+        <a href="./wiki/index.php?title=Videos">
+        link
+        </a>.
     </div>
 </div>
 
@@ -82,12 +97,10 @@
     <div class="span4">
         <h1>Features</h1>
         <div class="ceu-just">
-C&eacute;u supports <span class="ceu-text">lock-free concurrency</span> with
-<span class="ceu-text">deterministic execution</span> guaranteed at compile 
-time.
-C&eacute;u has a <span class="ceu-text">small memory footprint</span>, supports 
-<span class="ceu-text">inlining of <i>C</i> code</span>, and <span 
-class="ceu-text">simulation</span> in the language itself.
+<span class="ceu-text">C&eacute;u</span> supports lock-free concurrency with
+deterministic execution.
+<span class="ceu-text">C&eacute;u</span> has a small memory footprint, supports 
+inlining of C code, and simulation in the language itself.
 <!--
 <i>C&eacute;u is the ideal language for highly constrained embedded 
 platforms.</i>
@@ -98,7 +111,8 @@ platforms.</i>
         <h1>Docs</h1>
         <div class="ceu-just">
         The online <a href="./try.php">interactive tutorial</a> presents a 
-        comprehensive step-by-step introduction to C&eacute;u.
+        comprehensive step-by-step introduction to <span 
+class="ceu-text">C&eacute;u</span>.
         <br/>
         Visit also the <a href="./wiki/">C&eacute;up&eacute;dia</a>, the home 
         for the docs.
@@ -109,7 +123,8 @@ platforms.</i>
         <div class="ceu-just">
             <a href="./wiki/index.php?title=C%C3%A9u_in_a_Box">
             <i>C&eacute;u-in-a-Box</i></a> is a Linux-based virtual machine 
-            pre-installed with C&eacute;u for Arduino and TinyOS.
+            pre-installed with <span class="ceu-text">C&eacute;u</span> for 
+Arduino, TinyOS, and SDL.
             <br/>
             Visit also the <a href="https://github.com/fsantanna/ceu">
                 C&eacute;u repository
