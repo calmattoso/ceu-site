@@ -1,5 +1,5 @@
-C _inc(), _mystruct=4;
-C do
+native _inc(), _mystruct;
+native do
     int inc (int a) {
         return a;
     }

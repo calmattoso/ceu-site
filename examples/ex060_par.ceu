@@ -1,4 +1,4 @@
-C _printf();
+native _printf();
 input void HELLO;
 input void WORLD;
 par do      // par/and, par/or would behave the same

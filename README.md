@@ -1,3 +1,21 @@
+Install
+=======
+
+Install Apache & PHP:
+
+> sudo apt-get install apache2 php5
+
+Put the "ceu-site" directory under the server root tree:
+
+> cd /var/www
+> ln -s <...>/ceu-site/ ceu     # should be writeable by the server user
+
+Create "tmp" directory and put "timeout" under "ceu-site":
+
+> cd <...>/ceu-site
+> mkdir tmp/                    # should be writeable by the server user
+> ln -s /usr/bin/timeout
+
 Index.html
 ==========
 

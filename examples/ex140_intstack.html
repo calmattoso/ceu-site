@@ -19,3 +19,9 @@ Also, just like routines, internal events can nest to a deep level of emits.
 <blockquote>
 	<p><i>Internal events execute similar to routines!</i></p>
 </blockquote>
+
+<p>
+Note that an <code>await</code> statement cannot react in the same reaction it 
+is reached.
+Therefore, the second <code>emit e</code> is ignored by the <code>await 
+e</code>.

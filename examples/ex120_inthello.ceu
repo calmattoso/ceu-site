@@ -1,7 +1,7 @@
 // internal event begin in lowercase
 event int e;
 var   int i = 0;
-C _printf();
+native _printf();
 par do
     loop do
         i = await e;    // waits for changes
@@ -10,6 +10,6 @@ par do
 with
     loop do
         await 250ms;
-        emit e=i+1;     // triggers 'e'
+        emit e => i+1;  // triggers 'e'
     end
 end

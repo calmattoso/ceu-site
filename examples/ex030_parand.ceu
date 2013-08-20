@@ -1,4 +1,4 @@
-C _printf();
+native _printf();
 loop do
     par/and do
         await 100ms;

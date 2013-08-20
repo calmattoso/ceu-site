@@ -14,8 +14,8 @@ with
                    // v=0+1 => 1
 
     // 1st trail is awaiting 'e' again
-    emit e;        // resumes after 1st trail halts
-                   // v=1+1 => 2
+    // however, it cannot awake again in the very same reaction
+    emit e;        // resumes immediately
 
-    return v;
+    return v;      // v=1
 end

@@ -1,6 +1,7 @@
 var int ret;
 par/or do
-    ret = async do
+    var int* ptr = &ret;
+    async (ptr) do
         // calculates fat of 10
         var int fat = 1;
         var int i = 10;
@@ -11,7 +12,7 @@ par/or do
             fat = fat * i;
             i = i - 1;
         end
-        return fat;
+        *ptr = fat;
     end;
 with
     await 1s;  // kill the async if it takes long

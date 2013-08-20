@@ -30,7 +30,7 @@
 
     function ceu ($ceu_code, &$stdout, &$stderr)
     {
-        $cmd = "./ceu --m4 --c-calls '_printf _assert _inc' - --output -";
+        $cmd = "./ceu --c-calls '_printf _assert _inc' - --output -";
         return exe($cmd, $ceu_code, $stdout, $stderr);
     }
 
