@@ -1,0 +1,7 @@
+*.swo
+*.swp
+_ceu_*
+timeout
+backup/
+tmp/
+examples/old/
