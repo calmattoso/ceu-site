@@ -1,0 +1,123 @@
+<h1>"Safe System-level Concurrency on Resource-Constrained Nodes"</h1>
+
+<h2>Presented in <a href="http://sensys.acm.org/2013/">SenSys'13</a></h2>
+
+<hr>
+
+<h3>Evaluation</h3>
+
+<p>
+To reproduce the evaluation presented in Section 4 of the paper, we provide a 
+pre-configured environment that can be downloaded and run on VirtualBox.
+
+<p>
+Running the current version of C&eacute;u will probably not work, given that 
+the language is still evolving.
+
+<p>
+<a href="CiB-sensys_13.ova">Download</a>
+
+If you need further assistance on running the experiments, please send me an 
+e-mail. I'll be happy to help you out.
+
+<h4>Trickle</h4>
+
+<pre>
+# cd /home/ceu/tinyos-2x/tos/lib/net
+# ls
+    TrickleTimerImplP.nc          // choose to link from .orig or .ceu
+    TrickleTimerImplP.nc.orig     // component in nesC
+    TrickleTimerImplP.nc.ceu      // component in Ceu
+    trickle.ceu                   // Ceu source code
+# ceu --m4 trickle.ceu            // generates _ceu_*
+
+# cd /home/ceu/tinyos-2x/apps/tests/TestTrickle
+# make telosb
+
+# cd /home/ceu/tinyos-exps/tos/lib/net
+# wc trickle.ceu.cmp TrickleTimerImplP.nc.orig.cmp
+    // modified source files for token count comparison
+</pre>
+
+<h4>CC2420</h4>
+
+<pre>
+# cd /home/ceu/tinyos-2/tos/chips/cc2420/receive
+# ls
+    CC2420ReceiveP.nc          // choose to link from .orig or .ceu
+    CC2420ReceiveP.nc.orig     // component in nesC
+    CC2420ReceiveP.nc.ceu      // component in Ceu
+    recv.ceu                   // Ceu source code
+    read.ceu                   // Ceu source code
+# ceu --m4 recv.ceu            // generates _ceu_*
+
+# cd /home/ceu/tinyos-2x/apps/RadioCountToLeds
+# make telosb
+
+# cd /home/ceu/tinyos-exps/tos/chips/cc2420/receive
+# wc recv.ceu.cmp CC2420ReceiveP.nc.orig.cmp
+    // modified source files for token count comparison
+</pre>
+
+<h4>DRIP</h4>
+
+<pre>
+# cd /home/ceu/tinyos-2x/tos/lib/net/drip
+# ls
+    DisseminationEngineImplP.nc         // choose to link from .orig or .ceu
+    DisseminationEngineImplP.nc.orig    // component in nesC
+    DisseminationEngineImplP.nc.ceu     // component in Ceu
+    drip.ceu                            // Ceu source code
+# ceu --m4 drip.ceu                     // generates _ceu_*
+
+# cd /home/ceu/tinyos-2x/apps/tests/TestDissemination
+# make telosb
+
+# cd /home/ceu/tinyos-exps/tos/lib/net/drip
+# wc drip.ceu.cmp DisseminationEngineImplP.nc.orig.cmp
+    // modified source files for token count comparison
+</pre>
+
+<h4>SRP</h4>
+
+<pre>
+# cd /home/ceu/tinyos-2x/tos/lib/net/srp
+# ls
+    SourceRouteEngineP.nc         // choose to link from .orig or .ceu
+    SourceRouteEngineP.nc.orig    // component in nesC
+    SourceRouteEngineP.nc.ceu     // component in Ceu
+    srp.ceu                       // Ceu source code
+# ceu --m4 srp.ceu                // generates _ceu_*
+
+# cd /home/ceu/tinyos-2x/apps/tests/TestSrp
+# make telosb
+
+# cd /home/ceu/tinyos-exps/tos/lib/net/srp
+# wc srp.ceu.cmp SourceRouteEngineP.nc.orig.cmp
+    // modified source files for token count comparison
+</pre>
+
+<h4>CTP</h4>
+
+<pre>
+# cd /home/ceu/tinyos-2x/tos/lib/net/ctp
+# ls
+    CtpRoutingEngineP.nc         // choose to link from .orig or .ceu
+    CtpRoutingEngineP.nc.orig    // component in nesC
+    CtpRoutingEngineP.nc.ceu     // component in Ceu
+    routing.ceu                  // Ceu source code
+# ceu --m4 routing.ceu           // generates _ceu_*
+
+# cd /home/ceu/tinyos-2x/apps/tests/TestNetwork
+# make telosb
+
+# cd /home/ceu/tinyos-exps/tos/lib/net/ctp
+# wc routing.ceu.cmp CtpRoutingEngineP.nc.orig.cmp
+    // modified source files for token count comparison
+</pre>
+
+<hr>
+
+<h3>Errata</h3>
+
+<i>no information</i>
