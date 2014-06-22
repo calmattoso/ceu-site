@@ -14,4 +14,4 @@ var _mystruct s;
 var _mystruct* ps = &s;
 s.a = 10;
 ps:b = 5;
-return _inc(10) + ps:a - s.b;
+escape _inc(10) + ps:a - s.b;

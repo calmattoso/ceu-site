@@ -28,7 +28,20 @@ function load_code(lesson_id){
 
 // Sets the lesson input to that of the provided lesson_id
 function load_input(lesson_id){
-  $("#ceu-input-text textarea").val(Lessons[lesson_id].input);
+  $("#ceu-input-text textarea").val(Lessons[lesson_id].input + "    \n\
+/*                                                                  \n\
+ * Any comments or questions about this example?                    \n\
+ * Fill in this space and \"Run\" the example.                      \n\
+ * We'll get an e-mail with your comments.                          \n\
+ *                                                                  \n\
+ * NAME:                                                            \n\
+ * E-MAIL:                                                          \n\
+ * COMMENTS:                                                        \n\
+ *                                                                  \n\
+ *                                                                  \n\
+ */                                                                 \n\
+"
+)
 }
 
 // Updates the lesson number displayed in the Lesson panel textbar
@@ -79,6 +92,9 @@ var Slides = {
   }
 };
 
+var ORIG_CODE  = '';
+var ORIG_INPUT = '';
+
 // Loads the lesson of numeric_id equal to index
 function load_lesson(index){
   lesson_id = Slides.slides[index - 1];
@@ -88,6 +104,9 @@ function load_lesson(index){
   load_code(lesson_id);
   load_input(lesson_id); 
   clear_results();
+
+  ORIG_CODE  = $("#ceu-code-container textarea").val();
+  ORIG_INPUT = $("#ceu-input-text textarea").val();
 }  
 
 // Increase/decrease font size by diff px

@@ -15,4 +15,4 @@ with
     await E3;
     v = v * 2;   // deterministic, no need to be atomic
 end
-return v;
+escape v;

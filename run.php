@@ -15,6 +15,7 @@
             1 => array("pipe", "w"),  // stdout
             2 => array("pipe", "w"),  // stderr
         );
+
         $p = proc_open('nice -n19 ./timeout -k9 1s '.$cmd,
                 $dscs, $pipes, null, null);
         //$p = proc_open($cmd, $dscs, $pipes, null, null);
@@ -30,7 +31,11 @@
 
     function ceu ($ceu_code, &$stdout, &$stderr)
     {
-        $cmd = "./ceu --c-calls '_printf _assert _inc' - --output -";
+        //$cmd = "./ceu --warn-nondeterminism --c-calls '_printf _assert _inc' - --out-h - --out-c -";
+        $cmd = "./ceu --c-calls '_printf _assert _inc' - --out-h - --out-c -";
+//$f = fopen('_aaa.ceu', 'w');
+//fwrite($f, $ceu_code);
+//fclose($f);
         return exe($cmd, $ceu_code, $stdout, $stderr);
     }
 
@@ -38,35 +43,25 @@
     {
 $all = <<<XXXX
 #include <stdio.h>
-#include <assert.h>
-
-#include <stdint.h>
-typedef int64_t  s64;
-typedef int32_t  s32;
-typedef int16_t  s16;
-typedef int8_t    s8;
-typedef uint64_t u64;
-typedef uint32_t u32;
-typedef uint16_t u16;
-typedef uint8_t   u8;
-
-int ret_end=0, ret_val;
-#define ceu_out_end(v) { ret_end=1; ret_val=v; }
 
 XXXX;
-$all = $all . $c_code;
-$all = $all . <<<XXXX
+$all = $all . $c_code . <<<XXXX
 
 int main (int argc, char *argv[])
 {
-    ceu_go_all(&ret_end);
-    printf("*** END: %d\\n", ret_val);
-    return ret_val;
-}
+    byte CEU_DATA[sizeof(CEU_Main)];
+    tceu_app app;
+        app.data = (tceu_org*) &CEU_DATA;
+        app.init = &ceu_app_init;
 
+    int ret = ceu_go_all(&app);
+    printf("*** END: %d\\n", ret);
+
+    return ret;
+}
 XXXX;
         // TODO: -ansi
-        return exe('gcc -xc - -o'.$run_name, $all, $stdout, $stderr);
+        return exe('gcc -xc - -o '.$run_name, $all, $stdout, $stderr);
     }
 ?>
 
@@ -76,18 +71,19 @@ XXXX;
         $output = '';
         $debug  = '';
 
+        $changed = ($_REQUEST['changed'] == 'true');
+
         $input = $_REQUEST['input'];
         if ($input == '') {
             $all =  $_REQUEST['code'];
         } else {
-            $all =  ' par/or do ' .
+            $all =  ' par do ' .
                         $_REQUEST['code'] .
                     ' with ' .
                         ' async do ' .
                             $input .
                         ' end ' .
-                    ' end ' .
-                    ' return 0;';
+                    ' end ' ;
         }
 
         $ret = true;
@@ -123,12 +119,18 @@ XXXX;
               isset_or($_SERVER['HTTP_X_FORWARDED_FOR'], '') . ' | ' .
               isset_or($_SERVER['HTTP_CLIENT_IP'],'');
 
-        $body = "=== IP ===\n\n"      . $ip . "\n\n" .
+        $body = "=== IP ===\n\n"      . $ip . "\n\n";
+        if ($changed) {
+            $body = $body .
                 "=== CODE ===\n\n"    . $_REQUEST['code'] . "\n\n" .
                 "=== INPUT === \n\n"  . $input . "\n\n" .
                 "=== OUTPUT === \n\n" . $out . "\n\n" .
-                "=== DEBUG === \n\n"  . $err . "\n\n" .
-                "======================================" . "\n\n";
+                "=== DEBUG === \n\n"  . $err . "\n\n";
+        } else {
+            $body = $body .
+                "=== NO CHANGES === \n\n";
+        }
+        $body = $body . "======================================" . "\n\n";
 
         $f = fopen('tmp/TRY.txt', 'a');
         fwrite($f, $body);

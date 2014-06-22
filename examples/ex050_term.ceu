@@ -14,4 +14,4 @@ with
     await TERM;  // but par/or terminates on TERM
                  // and kills the original loop
 end
-return 1;
+escape 1;

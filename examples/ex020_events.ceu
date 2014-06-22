@@ -10,4 +10,4 @@ loop do
         break;  // escapes the loop when v==0
     end
 end
-return 0;
+escape 0;

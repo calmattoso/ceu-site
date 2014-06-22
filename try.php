@@ -191,8 +191,16 @@
           }
           
           // Get the CODE and INPUT entered by the user (the user might have modified both)
-          request.code = $code_textarea.val();
-          request.input = $input_textarea.val();
+          var new_code  = $code_textarea.val();
+          var new_input = $input_textarea.val();
+
+          request.code    = new_code;
+          request.input   = new_input;
+          request.changed = new_code  != ORIG_CODE
+                         || new_input != ORIG_INPUT;
+
+          ORIG_CODE  = new_code;
+          ORIG_INPUT = new_input;
           
           // Show the OUTPUT and DEBUG in the RESULTS panel
           $.post('run.php', request, function(response){
@@ -212,7 +220,7 @@
         });
         
         // For some reason the code for the intro lesson is not being loaded
-        Lessons.ex000_intro['code'] = '/* Have fun with Ceu ! */\n return 0;';
+        Lessons.ex000_intro['code'] = '/* Have fun with Ceu ! */\n escape 0;';
         
         // Selection of the first slide to be loaded:
         // -- User specified one: ?sample=<value>

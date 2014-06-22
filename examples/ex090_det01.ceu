@@ -7,4 +7,4 @@ with
     await A;
     v = 2;          // suspicious access
 end
-return v;           // always returns 2
+escape v;           // always returns 2

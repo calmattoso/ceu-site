@@ -8,4 +8,4 @@ loop do             // a tight loop
     fat = fat * i;
     i = i - 1;      // this path does not await or break
 end
-return fat;
+escape fat;

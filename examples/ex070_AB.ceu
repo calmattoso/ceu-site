@@ -7,4 +7,4 @@ with
     await B;        // second trail
     v = v * 2;
 end
-return v;
+escape v;

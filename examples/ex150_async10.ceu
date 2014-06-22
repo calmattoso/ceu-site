@@ -1,7 +1,6 @@
 var int ret;
-var int* ptr = &ret;
 
-async (ptr) do
+async (&ret) do
     // calculates fat of 10
     var int fat = 1;
     var int i = 10;
@@ -12,7 +11,7 @@ async (ptr) do
         fat = fat * i;
         i = i - 1;
     end
-    *ptr = fat;
+    ret = fat;
 end;
 
-return ret;
+escape ret;

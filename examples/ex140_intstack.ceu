@@ -1,4 +1,4 @@
-input int START;
+input int OS_START;
 event void e;      // an event carrying no values
 var int v = 0;
 par do
@@ -7,7 +7,7 @@ par do
         v = v + 1; // increments 'v'
     end
 with
-    await START;
+    await OS_START;
 
     // 1st trail is awaiting 'e'
     emit e;        // resumes after 1st trail halts
@@ -17,5 +17,5 @@ with
     // however, it cannot awake again in the very same reaction
     emit e;        // resumes immediately
 
-    return v;      // v=1
+    escape v;      // v=1
 end
