@@ -1,5 +1,4 @@
 // tests a program with a simulation in parallel
-native _printf();
 par do
 
     // original code

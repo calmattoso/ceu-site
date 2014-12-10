@@ -1,7 +1,6 @@
 // internal event begin in lowercase
 event int e;
 var   int i = 0;
-native _printf();
 par do
     loop do
         i = await e;    // waits for changes

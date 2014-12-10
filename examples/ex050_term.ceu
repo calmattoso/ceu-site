@@ -1,4 +1,3 @@
-native _printf();
 input void TERM;
 par/or do
     loop do      // par/and loop never terminates

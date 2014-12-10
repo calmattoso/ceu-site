@@ -2,7 +2,6 @@
 // 'MY_EVT' is an event of ints
 input int MY_EVT;
 
-native _printf();
 loop do
     var int v = await MY_EVT;
     _printf("MY_EVT=%d\n", v);
