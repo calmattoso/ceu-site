@@ -16,8 +16,10 @@
             2 => array("pipe", "w"),  // stderr
         );
 
-        $p = proc_open('nice -n19 ./timeout -k9 1s '.$cmd,
+        $p = proc_open('./timeout -k9 1s '.$cmd,
                 $dscs, $pipes, null, null);
+        //$p = proc_open('nice -n19 ./timeout -k9 1s '.$cmd,
+                //$dscs, $pipes, null, null);
         //$p = proc_open($cmd, $dscs, $pipes, null, null);
         fwrite($pipes[0], $input);
         fclose($pipes[0]);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?     
+<?php
   // Object that holds all information (name, code, input, lesson html) for each lesson
   $lessons = array(
     "ex000_intro" => array(
@@ -127,7 +127,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-      var Lessons = <? echo json_encode($lessons); ?>;  
+      var Lessons = <?php echo json_encode($lessons); ?>;
       delete Lessons.bug;
     </script>
     <script src="js/try.js"></script>
@@ -319,7 +319,7 @@
       </div>
       <div class="modal-body">
         <ol>
-          <?
+          <?php
             foreach($lessons as $key => $data){
               if($key == "bug") continue;
               echo "<li data-lesson-id=\"$key\"><a href=\"#\">" . $lessons[$key]['name'] . "</a></li>\n";
