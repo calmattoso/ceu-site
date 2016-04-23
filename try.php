@@ -159,7 +159,7 @@
           if($(this).attr("id") === "ceu-next"){
             Slides.next();
           }
-          else {
+          else if($(this).attr("id") === "ceu-left"){
             Slides.previous();
           }    
         });
