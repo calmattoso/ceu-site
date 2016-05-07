@@ -46,6 +46,9 @@
 $all = <<<XXXX
 #include <stdio.h>
 
+#define ceu_out_assert(v)
+#define ceu_out_log(m,s)
+
 XXXX;
 $all = $all . $c_code . <<<XXXX
 

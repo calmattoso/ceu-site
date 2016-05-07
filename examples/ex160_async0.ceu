@@ -1,6 +1,6 @@
 var int ret;
 par/or do
-    async (&ret) do
+    async (ret) do
         // calculates fat of 10
         var int fat = 1;
         var int i = 10;
