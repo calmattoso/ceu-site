@@ -1,0 +1,18 @@
+<p>
+If only a single line of execution were allowed, a program would not be allowed
+to wait for multiple events at the same time.
+Then, C&eacute;u would be the most worthless language in the World.
+
+<p>
+C&eacute;u provides parallel compositions to allow multiple lines of execution,
+aka <span class="label label-info">trails</span>, to coexist and wait for
+multiple events:
+
+<ul>
+    <li> a <code>par/and</code> stands for <i>parallel and</i> and rejoins
+                                after all trails in parallel terminate
+    <li> a <code>par/or</code>  stands for <i>parallel or</i> and rejoins
+                                after any of the trails in parallel terminates,
+                                aborting all others
+    <li> a <code>par</code>     stands for <i>parallel</i> and never rejoins
+</ul>

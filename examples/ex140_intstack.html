@@ -14,14 +14,15 @@ routines.
 When a routine is invoked, the statement following it only executes after the 
 routine returns.
 Also, just like routines, internal events can nest to a deep level of emits.
-</p>
 
 <blockquote>
 	<p><i>Internal events execute similar to routines!</i></p>
 </blockquote>
 
+<!--
 <p>
 Note that an <code>await</code> statement cannot react in the same reaction it 
 is reached.
 Therefore, the second <code>emit e</code> is ignored by the <code>await 
 e</code>.
+-->

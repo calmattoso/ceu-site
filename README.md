@@ -3,18 +3,24 @@ Install
 
 Install Apache & PHP:
 
-> sudo apt-get install apache2 php5
+```
+$ sudo apt-get install apache2 php libapache2-mod-php
+```
 
 Put the "ceu-site" directory under the server root tree:
 
-> cd /var/www
-> ln -s <...>/ceu-site/ ceu     # should be writeable by the server user
+```
+$ cd /var/www/html/
+$ ln -s <...>/ceu-site/ ceu     # should be writeable by the server user
+```
 
 Create "tmp" directory and put "timeout" under "ceu-site":
 
-> cd <...>/ceu-site
-> mkdir tmp/                    # should be writeable by the server user
-> ln -s /usr/bin/timeout
+```
+$ cd <...>/ceu-site
+$ mkdir tmp/                    # should be writeable by the server user
+$ ln -s /usr/bin/timeout
+```
 
 Index.html
 ==========
@@ -33,7 +39,7 @@ Try.php
 
 The online interactive tutorial.
 
-There is a simple **header** used to inform the user he’s using the
+There is a simple **header** used to inform the user he is using the
 online IDE.
 
 The **footer** presents links where the user can find further
@@ -47,7 +53,7 @@ The body of the page, features four sections:
     highlight interesting elements being presented. *Commands* are
     surrounded by the *code* tag; importante concepts are highlighted
     with *label* classes.
--   **Results** panel: displays the results of the code’s
+-   **Results** panel: displays the results of the code
     **compilation** and **execution**.
 -   **Code** panel: where the user should enter Céu source code
 -   **Input** panel: if necessary, where input can be given to the
@@ -69,7 +75,7 @@ receive the following data:
 -   **samples**: the **id** for the current lesson
 -   **go**: Run! (it checks if this attribute is set)
 -   **mode**: used to specify if the code should be executed, which
-    happens when it’s set to **run**. Otherwise, the code will only be
+    happens when it is set to **run**. Otherwise, the code will only be
     compiled.
 -   **dfa**: if set, a **static analysis** will be performed on the file
 -   **input**: input for the program

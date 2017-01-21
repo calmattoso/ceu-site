@@ -31,10 +31,14 @@
         return proc_close($p) == 0;
     }
 
-    function ceu ($ceu_code, &$stdout, &$stderr)
+    function ceu ($ceu_code, $run_name, &$stdout, &$stderr)
     {
         //$cmd = "./ceu --warn-nondeterminism --c-calls '_printf _assert _inc' - --out-h - --out-c -";
-        $cmd = "./ceu --c-calls '_printf _assert _inc' - --out-h - --out-c -";
+        //$cmd = "./ceu --c-calls '_printf _assert _inc' - --out-h - --out-c -";
+        $cmd = "./ceu --pre --pre-input=-" .
+                    " --ceu " .
+                    " --env --env-types=types.h --env-main=main.c" .
+                    " --cc --cc-output=$run_name";
 //$f = fopen('_aaa.ceu', 'w');
 //fwrite($f, $ceu_code);
 //fclose($f);
@@ -51,19 +55,6 @@ $all = <<<XXXX
 
 XXXX;
 $all = $all . $c_code . <<<XXXX
-
-int main (int argc, char *argv[])
-{
-    byte CEU_DATA[sizeof(CEU_Main)];
-    tceu_app app;
-        app.data = (tceu_org*) &CEU_DATA;
-        app.init = &ceu_app_init;
-
-    int ret = ceu_go_all(&app);
-    printf("*** END: %d\\n", ret);
-
-    return ret;
-}
 XXXX;
         // TODO: -ansi
         return exe('gcc -xc - -o '.$run_name, $all, $stdout, $stderr);
@@ -82,14 +73,24 @@ XXXX;
         if ($input == '') {
             $all =  $_REQUEST['code'];
         } else {
-            $all =  ' par do ' .
-                        $_REQUEST['code'] .
-                    ' with ' .
-                        ' async do ' .
-                            $input .
-                        ' end ' .
-                    ' end ' ;
+            $all =  "native/nohold _printf;     " .     // no new lines
+                    "native/pre do              " .     // correct lines in
+                    "   ##include <stdio.h>     " .     // compiling errors
+                    "end                        " .
+                    "native/end;                " .
+                    "par/or do                  " .
+                        $_REQUEST['code']       ." ".
+                    "with                       " .
+                    "   await async do          " .
+                            $input              ." ".
+                    "   end                     " .
+                    "with                       " .
+                    "   do await FOREVER; end   " .
+                    "   _printf(\"oi\");        " .
+                    "end                        " .
+                    "escape 0;                  " ;
         }
+error_log($all);
 
         $ret = true;
         $out = '';
@@ -97,32 +98,47 @@ XXXX;
 
         if ($ret)
         {
-            $ret = ceu($all, $stdout, $stderr);
+            $run_name = 'tmp/'. uniqid('ceu_') . '.exe';
+error_log($run_name);
+            $ret = ceu($all, $run_name, $stdout, $stderr);
             $err = $err . $stderr;
-
             if ($ret) {
-                $run_name = 'tmp/'. uniqid('ceu_') . '.exe';
-                $ret = gcc($stdout, $run_name, $stdout, $stderr);
+                exe($run_name, '', $stdout, $stderr);
                 $err = $err . $stderr;
-
-                if ($ret) {
-                    exe($run_name, '', $stdout, $stderr);
-                    $err = $err . $stderr;
-                    $out = $stdout;
-                    unlink($run_name);
-                }
+                $out = $stdout;
+                //unlink($run_name);
             }
         }
 
         $response = array(
           "output" => htmlspecialchars($out),
           "debug"  => htmlspecialchars($err)
-				);
+        );
         echo json_encode($response); 
 
         $ip = isset_or($_SERVER['REMOTE_ADDR'],'') . ' | ' .
               isset_or($_SERVER['HTTP_X_FORWARDED_FOR'], '') . ' | ' .
               isset_or($_SERVER['HTTP_CLIENT_IP'],'');
+
+        $comments = <<<XXX
+/*                                                                  
+ * Any comments or questions about this example?                    
+ * Fill in this space and "Run" the example.                      
+ * We'll get an e-mail with your comments.                          
+ *                                                                  
+ * NAME:                                                            
+ * E-MAIL:                                                          
+ * COMMENTS:                                                        
+ *                                                                  
+ *                                                                  
+ */                                                                 
+XXX;
+        $same = strpos($input, $comments);
+        if ($same) {
+            $subject = "[try-ceu] new code";
+        } else {
+            $subject = "new code";
+        }
 
         $body = "=== IP ===\n\n"      . $ip . "\n\n";
         if ($changed) {
@@ -142,8 +158,10 @@ XXXX;
         fclose($f);
 
         $to = "francisco.santanna@gmail.com";
-        $subject = "[try-ceu] new code";
-        if (!mail($to, $subject, $body))
+/*
+        if (!mail($to, $subject, $body)) {
             error_log("message delivery failed");
+        }
+*/
     ?>
 <?php endif; ?>

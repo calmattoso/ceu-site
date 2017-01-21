@@ -60,11 +60,13 @@ function clear_results(){
 var Slides = {
   cur_slide: 1,
   slides: [
-    "ex000_intro",   "ex010_hello",    "ex020_events",   "ex030_parand",
+    "ex000_intro",   "ex010_hello",    "ex020_events",   "ex030_pars",
+    "ex035_parand",
     "ex040_paror",   "ex050_term",     "ex060_par",      "ex070_AB",
     "ex080_tight",   "ex090_det01",    "ex120_inthello", "ex140_intstack",
-    "ex150_async10", "ex160_async0",   "ex170_simul",    "ex180_cblock",
+    "ex150_async10", "ex160_async0",   "ex170_simul",
 /*
+    "ex180_cblock",
     "ex190_fin",
     "ex130_intvars",
     "ex100_atomic",

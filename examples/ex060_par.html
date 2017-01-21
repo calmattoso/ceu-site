@@ -1,10 +1,12 @@
 <p>
 Finally, the <code>par</code> statement should be used when trails in parallel 
 are supposed to run forever.
-</p>
 
 <p>
-In this example, a <code>par/and</code> or <code>par/or</code> would behave the 
-same, but could lead to confusion, because the composition is not supposed to 
-terminate.
-</p>
+In this example, the trails never terminate and are supposed to execute
+forever.
+
+<p>
+Even though a <code>par/and</code> or a <code>par/or</code> would behave the 
+same as a <code>par</code> in this case, they could lead to confusion since the
+composition never rejoins.

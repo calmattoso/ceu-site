@@ -1,15 +1,30 @@
-<p>Follows a reactive <i>Hello World!</i> in C&eacute;u that prints the infamous message every 250 milliseconds:</p>
+<p>
+This is a reactive <i>Hello World!</i> in C&eacute;u which prints the infamous
+message every 250 milliseconds:
    
-<p>The <code>await</code> statement halts the running line of execution until 
-the referred event occurs (in this case, the elapsing of 250 milliseconds).</p>
+<p>
+The <code>await</code> statement halts the running line of execution until 
+the specified event occurs (in this case, a 250 milliseconds timer).
 
-<p>In C&eacute;u, external C symbols like <code>printf</code> must be preceded 
+<p>
+In C&eacute;u, external C symbols like <code>printf</code> must be preceded 
 with an <b>underscore</b>.
 <!-- and predeclared in with a <code>C</code> statement.-->
-</p>
 
-<p>The <code>loop</code> statement in the example repeats its body indefinitely.</p>
+<p>
+In this tutorial, <code>printf</code> is predeclared and is the only available
+function in C.
 
+<p>
+The <code>loop</code> statement in the example repeats its body indefinitely.
+
+<p>
+Note the <code>emit 1s</code> in the
+<span class="label label-info">Input</span> panel.
+Since the tutorial executes as a simulation in the server, we need to provide
+all input to the program.
+
+The <code>loop</code> statement in the example repeats its body indefinitely.
 <blockquote>
   <p><i>Timers are integrated with the language!</i></p>
 </blockquote>

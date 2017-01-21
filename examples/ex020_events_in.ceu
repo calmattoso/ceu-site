@@ -1,4 +1,4 @@
-emit MY_EVT => 10;     // inputs the event MY_EVT set to 10
-emit MY_EVT => 5;
-emit MY_EVT => 0;
-emit MY_EVT => 99;     // no effect (the loop has already escaped)
+emit MY_EVT(10);     // inputs the event MY_EVT set to 10
+emit MY_EVT(5);
+emit MY_EVT(0);
+emit MY_EVT(99);     // no effect (the loop has already escaped)

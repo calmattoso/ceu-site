@@ -11,7 +11,10 @@
     "ex020_events" => array(
       "name" => "Input Events"
     ),
-    "ex030_parand" => array(
+    "ex030_pars" => array(
+      "name" => "Parallel Compositions"
+    ),
+    "ex035_parand" => array(
       "name" => "Parallel Compositions: par/and"
     ),
     "ex040_paror" => array(
@@ -68,10 +71,10 @@
     "ex170_simul" => array(
       "name" => "Simulation"
     ),
+/*
     "ex180_cblock" => array(
       "name" => "C Definitions"
     ),
-/*
     "ex190_fin" => array(
       "name" => "Finalization"
     ),

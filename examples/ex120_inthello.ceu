@@ -9,6 +9,6 @@ par do
 with
     loop do
         await 250ms;
-        emit e => i+1;  // triggers 'e'
+        emit e(i+1);    // triggers 'e'
     end
 end
