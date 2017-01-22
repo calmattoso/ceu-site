@@ -90,7 +90,6 @@ XXXX;
                     "end                        " .
                     "escape 0;                  " ;
         }
-error_log($all);
 
         $ret = true;
         $out = '';
@@ -99,14 +98,13 @@ error_log($all);
         if ($ret)
         {
             $run_name = 'tmp/'. uniqid('ceu_') . '.exe';
-error_log($run_name);
             $ret = ceu($all, $run_name, $stdout, $stderr);
             $err = $err . $stderr;
             if ($ret) {
                 exe($run_name, '', $stdout, $stderr);
                 $err = $err . $stderr;
                 $out = $stdout;
-                //unlink($run_name);
+                unlink($run_name);
             }
         }
 
@@ -158,10 +156,8 @@ XXX;
         fclose($f);
 
         $to = "francisco.santanna@gmail.com";
-/*
         if (!mail($to, $subject, $body)) {
             error_log("message delivery failed");
         }
-*/
     ?>
 <?php endif; ?>

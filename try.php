@@ -254,7 +254,10 @@
             <div class="relative">
               <div class="ceu-textbar">
                 <a href="index.html"><img src="img/ceu.png"></a>
-<!-- <blink>UNDER MAINTENANCE</blink> -->
+v0.20
+<!--
+<blink>UNDER MAINTENANCE</blink>
+-->
                 <span id="ceu-font-controls">
                   <button id="ceu-font-decrease" class="btn btn-mini" alt="Decrease font size." title="Decrease font size"><i class="icon-minus-sign"></i></button>
                   Font
