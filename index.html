@@ -21,17 +21,28 @@
     <p class="lead ceu-text">The Programming Language</p>
 </div>
 
+<div class="row">
+    <div class="span10 hero-unit">
+<!--
+        <h2>
+            <span class="ceu-text">C&eacute;u:</span>
+        </h2>
+-->
+        <h3>
+            <i>"Structured Synchronous Reactive Programming"</i>
+        </h3>
+        <h4>
+            <i>(lightweight and deterministic concurrency with side effects)</i>
+        </h4>
+    </div>
+</div>
+
 <!-- Call to Action buttons -->
+<!--
 <div id="ceu-actions" class="row">
     <div class="span4">
         <a href="./wiki/" class="btn btn-large pull-right">
             Visit <i>C&eacute;up&eacute;dia!</i>
-        </a>
-    </div>
-
-    <div class="span4">
-        <a href="./try.php" class="btn btn-large btn-primary btn-block">
-            Try C&eacute;u Online!
         </a>
     </div>
 
@@ -41,6 +52,7 @@
         </a>
     </div>
 </div>
+-->
 
 </div>
 </div>
@@ -49,29 +61,15 @@
 <div id="ceu-walkthrough" class="container">
 
 <div class="row">
-    <div class="span10 hero-unit">
-<center>
-        <h2>
-            <span class="ceu-text">C&eacute;u:</span>
-        </h2>
-<!--
--->
-        <h3>
-            <i>"Structured Synchronous Reactive Programming"</i>
-        </h3>
-        <h4>
-            <i>(safe and deterministic concurrency with side effects)</i>
-        </h4>
-</center>
-    </div>
-</div>
-
-<div class="row">
     <br/>
 </div>
 
 <div class="row">
     <div class="span4">
+        <a href="./try.php" class="btn btn-large btn-primary btn-block">
+            Try the Online Tutorial!
+        </a>
+        <br/>
         <h4>This is what <span class="ceu-text">C&eacute;u</span> looks like:</h4>
         <pre class="ceu-code">
 <b>input</b> int KEY;
@@ -85,9 +83,10 @@
 </pre>
     <i><small>(Prints the "Hello World!" message every second, terminating on a 
     key press.)</small></i>
+
     </div>
     <div class="span8">
-        <iframe src="//player.vimeo.com/video/110512582" width="580" height="326" frameborder="0"
+        <iframe src="//player.vimeo.com/video/110512582" width="520" height="326" frameborder="0"
             webkitallowfullscreen mozallowfullscreen allowfullscreen>
         </iframe>
 <!--
@@ -108,13 +107,17 @@
 </div>
 
 <div class="row">
-    <div class="span4">
+    <div class="span5">
         <h1>Features</h1>
         <div class="ceu-just">
-<span class="ceu-text">C&eacute;u</span> supports synchronous concurrency with 
-shared memory and deterministic execution.
-<span class="ceu-text">C&eacute;u</span> has a small memory footprint and 
-integrates seamlessly with C.
+            <ul>
+                <li> Structured event handling
+                <li> Synchronous and discrete execution
+                <li> Deterministic shared-memory concurrency
+                <li> Small memory footprint
+                <li> Seamless integration with C and Lua
+                <li> Asynchronous threads
+            </ul>
 <!--
  code, and simulation in the language itself.
 <i>C&eacute;u is the ideal language for highly constrained embedded 
@@ -122,28 +125,32 @@ platforms.</i>
 -->
         </div>
     </div>
-    <div class="span4">
+    <div class="span3">
         <h1>Docs</h1>
         <div class="ceu-just">
-        The online <a href="./try.php">interactive tutorial</a> presents a 
-        comprehensive step-by-step introduction to <span 
-class="ceu-text">C&eacute;u</span>.
-        <br/>
-        Visit also the <a href="./wiki/">C&eacute;up&eacute;dia</a>, the home 
-        for the docs.
+            <ul>
+                <li> <a href="./try.php">Online tutorial</a>
+                <li> <a href="http://fsantanna.github.io/ceu/out/manual/v0.20/"> Manual in html </a>
+                <li> <a href="https://github.com/fsantanna/ceu/blob/master/docs/manual/v0.20/ceu-v0.20.pdf"> Manual in pdf</a>
+                <li> <a href="http://www.ceu-lang.org/chico/#ceu"> Academic papers </a>
+            </ul>
         </div>
     </div>
     <div class="span4">
         <h1>Download</h1>
         <div class="ceu-just">
-            <a href="./wiki/index.php?title=C%C3%A9u_in_a_Box">
-            <i>C&eacute;u-in-a-Box</i></a> is a Linux-based virtual machine 
-            pre-installed with <span class="ceu-text">C&eacute;u</span> for 
-Arduino, TinyOS, and SDL.
-            <br/>
-            Visit also the <a href="https://github.com/fsantanna/ceu">
-                C&eacute;u repository
-            </a> on GitHub.
+            <ul>
+                <li> <a href="https://github.com/fsantanna/ceu"> Céu </a>
+                <li> Environments:
+                    <ul>
+                        <li> <a href="https://github.com/fsantanna/ceu-sdl">     Céu-SDL     </a>
+                        <li> <a href="https://github.com/fsantanna/ceu-libuv">   Céu-libuv   </a>
+                        <li> <a href="https://github.com/fsantanna/ceu-arduino"> Céu-Arduino </a>
+                    </ul>
+<!--
+                <li> <a href="./wiki/index.php?title=C%C3%A9u_in_a_Box"> <i>Céu in a Box</i> VM </a>
+-->
+            </ul>
         </div>
     </div>
 </div>
