@@ -17,7 +17,7 @@ environments
 CiB is distributed as a single <tt>.ova</tt> file to be used with
 [VirtualBox](http://www.virtualbox.org/).
 
-- [Download CiB-v0.20 (X.XGb)](http://www.ceu-lang.org/CiB-0.20.ova)
+- [Download CiB-v0.20 (2.3Gb)](http://www.ceu-lang.org/CiB-v0.20.ova)
 <!--
 - [Release History](https://github.com/fsantanna/ceu/blob/master/HISTORY)
 -->
@@ -38,7 +38,7 @@ check if everything is ok:
 
 ```
 $ cd ceu/ceu/tst
-$ ./run
+$ ./run             # some examples might not compile because of the gcc version
 ```
 
 The directory structure of CiB is as follows:
@@ -51,6 +51,9 @@ The directory structure of CiB is as follows:
       - ceu-arduino/        # clone of http://github.com/fsantanna/ceu-arduino/
       - ceu-libuv/          # clone of http://github.com/fsantanna/ceu-libuv/
       - ceu-sdl/            # clone of http://github.com/fsantanna/ceu-sdl/
+        - ceu-sdl-leds/     # clone of http://github.com/fsantanna/ceu-sdl-leds/
+        - ceu-sdl-birds/    # clone of http://github.com/fsantanna/ceu-sdl-birds/
+        - ceu-sdl-storm/    # clone of http://github.com/fsantanna/ceu-sdl-storm/
 ```
 
 ## Keeping CiB up-to-date

@@ -1,4 +1,4 @@
-cib:
+all:
 	cd cib/ && pandoc index.md > index.html
 
 upload:

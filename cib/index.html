@@ -9,7 +9,7 @@ Céu in a Box
 <p>The distribution contains the compiler together with bindings for the environments <a href="http://github.com/fsantanna/ceu-arduino">Arduino</a>, <a href="http://github.com/fsantanna/ceu-libuv">libuv</a>, and <a href="http://github.com/fsantanna/ceu-sdl">SDL</a>.</p>
 <p>CiB is distributed as a single <tt>.ova</tt> file to be used with <a href="http://www.virtualbox.org/">VirtualBox</a>.</p>
 <ul>
-<li><a href="http://www.ceu-lang.org/CiB-0.20.ova">Download CiB-v0.20 (X.XGb)</a> <!--
+<li><a href="http://www.ceu-lang.org/CiB-v0.20.ova">Download CiB-v0.20 (2.3Gb)</a> <!--
 - [Release History](https://github.com/fsantanna/ceu/blob/master/HISTORY)
 --></li>
 </ul>
@@ -20,7 +20,7 @@ Céu in a Box
 Password: ceu</code></pre>
 <p>After logging in, open a terminal window and type the following commands to check if everything is ok:</p>
 <pre><code>$ cd ceu/ceu/tst
-$ ./run</code></pre>
+$ ./run             # some examples might not compile because of the gcc version</code></pre>
 <p>The directory structure of CiB is as follows:</p>
 <pre><code>  - /home/ceu/              # home dir for the user &quot;ceu&quot;
     - arduino-1.8.1/        # distribution from http://arduino.cc
@@ -28,7 +28,10 @@ $ ./run</code></pre>
       - ceu/                # clone of http://github.com/fsantanna/ceu/
       - ceu-arduino/        # clone of http://github.com/fsantanna/ceu-arduino/
       - ceu-libuv/          # clone of http://github.com/fsantanna/ceu-libuv/
-      - ceu-sdl/            # clone of http://github.com/fsantanna/ceu-sdl/</code></pre>
+      - ceu-sdl/            # clone of http://github.com/fsantanna/ceu-sdl/
+        - ceu-sdl-leds/     # clone of http://github.com/fsantanna/ceu-sdl-leds/
+        - ceu-sdl-birds/    # clone of http://github.com/fsantanna/ceu-sdl-birds/
+        - ceu-sdl-storm/    # clone of http://github.com/fsantanna/ceu-sdl-storm/</code></pre>
 <h2 id="keeping-cib-up-to-date">Keeping CiB up-to-date</h2>
 <pre><code>$ cd ~/ceu/ceu/
 $ git pull
