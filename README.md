@@ -22,6 +22,12 @@ $ mkdir tmp/                    # should be writeable by the server user
 $ ln -s /usr/bin/timeout
 ```
 
+- `TODO` Edit `ceu` on the server:
+
+```
+#!../lua-5.3.3/src/lua
+```
+
 Index.html
 ==========
 
@@ -32,7 +38,7 @@ document, in order to find out more information about it).
 This page also gives a brief explanation of the language, sided with a
 small piece of code that highlights major features of Céu.
 
-Twitter’s Bootstrap was used to make the layout of the page.
+Twitter's Bootstrap was used to make the layout of the page.
 
 Try.php
 =======
