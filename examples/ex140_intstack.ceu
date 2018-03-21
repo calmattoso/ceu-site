@@ -1,4 +1,4 @@
-event void e;      // an event carrying no values
+event none e;      // an event carrying no values
 var int v = 0;
 par do
     loop do        // a simple loop that

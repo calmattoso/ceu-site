@@ -1,4 +1,5 @@
-input void A, B;
+input none A;
+input none B;
 var int v = 0;
 par/and do
     await A;        // first trail

@@ -1,4 +1,6 @@
-input void E1, E2, E3;
+input none E1;
+input none E2;
+input none E3;
 var int v = 0;
 par/and do
     await E1;

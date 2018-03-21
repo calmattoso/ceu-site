@@ -254,7 +254,7 @@
             <div class="relative">
               <div class="ceu-textbar">
                 <a href="index.html"><img src="img/ceu.png"></a>
-v0.20
+v0.30
 <!--
 <blink>UNDER MAINTENANCE</blink>
 -->

@@ -42,6 +42,9 @@
 //$f = fopen('_aaa.ceu', 'w');
 //fwrite($f, $ceu_code);
 //fclose($f);
+        $f = fopen('tmp/xxx.ceu', 'w');
+        fwrite($f, $ceu_code);
+        fclose($f);
         return exe($cmd, $ceu_code, $stdout, $stderr);
     }
 
@@ -75,7 +78,7 @@ XXXX;
         } else {
             $all =  "native/nohold _printf;     " .     // no new lines
                     "native/pre do              " .     // correct lines in
-                    "   ##include <stdio.h>     " .     // compiling errors
+                    "     ##include <stdio.h>   " .     // compiling errors
                     "end                        " .
                     "native/end;                " .
                     "par/or do                  " .

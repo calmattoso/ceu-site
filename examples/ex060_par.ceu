@@ -1,5 +1,5 @@
-input void HELLO;
-input void WORLD;
+input none HELLO;
+input none WORLD;
 par do      // par/and, par/or would behave the same
     loop do
         await HELLO;

@@ -1,4 +1,4 @@
-input void TERM;
+input none TERM;
 par/or do
     loop do      // par/and loop never terminates
         par/and do

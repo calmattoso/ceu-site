@@ -1,4 +1,4 @@
-input void A;
+input none A;
 var int v = 0;
 par/and do
     await A;
