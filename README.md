@@ -91,5 +91,5 @@ Pandoc
 Some pages, such as manuals.html and tutorials.html are generated using [pandoc](https://pandoc.org/MANUAL.html), a Haskell library for converting from one markup format to another, and a command-line tool that uses this library. To update the content of a page ```NAME.html```, edit the same name markdown located at ```md``` folder.
 
 ```
-pandoc -s -o NAME.html --template=template.html md/NAME.md metadata.yaml
+pandoc -s -o NAME.html --template=template.html md/NAME.md
 ```
