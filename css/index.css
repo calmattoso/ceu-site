@@ -21,6 +21,22 @@ body {
   background-image: url('img/subtle_dots_@2X.png');
   background-repeat: repeat;
 }
+.container{
+  width:950px;
+}
+.jumbotron{
+  padding:40px 0px 5px 0px;
+  margin-bottom:0px;
+}
+.row{
+  margin-top:50px;
+}
+.bg-ceu-blue, .btn-primary{
+  background-color: #0063BE;
+}
+.navbar-dark .navbar-nav .nav-link{
+  color:white;
+}
 
 #ceu-header .navbar .nav{
   margin-left: 5%;

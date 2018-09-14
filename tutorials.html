@@ -8,11 +8,12 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
     <link href="css/index.css" rel="stylesheet">  <!-- Index css -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
 </head>
-
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-ceu-blue">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-ceu-blue">
     <a class="navbar-brand" href="./index.html">
         <img src="./img/ceu-ico.png" width="30" height="30" class="d-inline-block align-top" alt="">
     </a>
@@ -77,110 +78,45 @@
     </div>
 </nav>
 
-<div class="jumbotron">
-    <div class="text-center">
-        <img src="img/ceu.png" width="400">
-        <p class="lead ceu-text">
-            <h1 class="display-6">The Programming Language</h1>
-            <p class="lead">"Structured Synchronous Reactive Programming"</p>
-        </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="tutorials">Tutorials</h1>
+                <h2 id="pico-céu">pico-Céu</h2>
+                <ul>
+                <li><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/tree/pre-v0.40/examples/move-net">Move around using NETWORK features</a></li>
+                <li><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/tree/pre-v0.40/examples/race-frames">Devolping a game using frames]</li>
+                <li><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/tree/pre-v0.40/examples/race">Developing a game with pico-Céu from scratch</a></li>
+                </ul>
+                <h2 id="pico-céu-with-céu-arduino">pico-Céu with Céu-Arduino</h2>
+                <ul>
+                <li><a target="_blank" href="https://github.com/ceu-lang/ceu-maker/tree/pre-v0.40/resources/both/examples/echo-usart">Serial communication - Echo app</a></li>
+                </ul>
+                <h2 id="céu-maker">Céu-Maker</h2>
+                <ul>
+                <li><a target="_blank" href="https://github.com/AnnyCaroline/ceu-maker-gsoc/blob/master/VSCode%20with%20C%C3%A9u-Maker/VSCode-with-ceu-maker.md">Develop for Céu-Arduino using VSCode</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row"  style="margin-top:60px; margin-bottom:20px;">
+            <div class="col text-center">
+                <hr>
+                <a href="http://www.lua.inf.puc-rio.br/">
+                    <img src="img/lablua.png" width="100">
+                </a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="http://www.uerj.br/idiomas.php#gb">
+                    <img src="img/uerj.gif"   width="50">
+                </a>
+            </div>
+        </div>
     </div>
-</div>
-
-<div class="container">
-    <div class="row" style="justify-content:center">
-        <div class="col-5">
-            <a target="_blank" href="./try.php" class="btn btn-large btn-primary btn-block">
-                Try the Online Tutorial!
-            </a>
-            <br/>
-            <h4>This is what <span class="ceu-text">C&eacute;u</span> looks like:</h4>
-            <pre class="ceu-code">
-    <b>input</b> int KEY;
-    <b>par/or</b> <b>do</b>
-        <b>every</b> 1s <b>do</b>
-            _printf("Hello World!\n");
-        <b>end</b>
-    <b>with</b>
-        <b>await</b> KEY;
-    <b>end</b>
-    </pre>
-        <i><small>(Prints the "Hello World!" message every second, terminating on a 
-        key press.)</small></i>
     
-        </div>
-        <div class="col">
-        <iframe style="width: 100%;" height="330"
-        src="https://www.youtube.com/embed/Jkcv-YXhh_U"
-        frameborder="0" allowfullscreen>
-        </iframe>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-5">
-            <h1>Features</h1>
-            <div class="ceu-just">
-                <ul>
-                    <li> Structured event handling
-                    <li> Synchronous and discrete execution
-                    <li> Deterministic shared-memory concurrency
-                    <li> Small memory footprint
-                    <li> Seamless integration with C and Lua
-                    <li> Support for asynchronous threads
-                </ul>
-            </div>
-        </div>
-        <div class="col-3">
-            <h1>Learn</h1>
-            <div class="ceu-just">
-                <ul>
-                    <li> <a target="_blank" href="./try.php">Online tutorial</a> </li>
-                    <li> <a href="./manuals.html"> Manuals </a> </li>
-                    <li> <a href="./tutorials.html"> Tutorials </a> </li>              
-                    <li> <a href="http://www.ceu-lang.org/chico/#ceu"> Academic papers </a> </li>
-                    <li> <a href="http://groups.google.com/group/ceu-lang"> Mailing list </a> </li>
-                    <li> <a href="https://gitter.im/fsantanna/ceu"> Online chat </a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-4">
-            <h1>Download</h1>
-            <div class="ceu-just">
-                <ul>
-                    <li> <a href="https://github.com/ceu-lang/ceu"> Céu </a>
-                    <li> Environments:
-                        <ul>
-                            <li> <a href="https://github.com/ceu-lang/ceu-arduino"> Céu-Arduino </a>
-                            <li> <a href="https://github.com/ceu-lang/ceu-libuv">   Céu-libuv   </a>
-                            <li> <a href="https://github.com/ceu-lang/ceu-sdl">     Céu-SDL     </a>
-                            <li> <a href="https://github.com/ceu-lang/pico-ceu">     pico-Céu    </a>
-                            
-                        </ul>
-                    <li> <a href="./cib/">Céu in a Box VM </a> </li>
-                    <li> <a href="https://github.com/ceu-lang/ceu-maker/releases">Céu-Maker</a></li>
-                </ul>
-                
-            </div>
-        </div>
-    </div>
-    <div class="row"  style="margin-top:0px; margin-bottom:20px;">
-        <div class="col text-center">
-            <hr>
-            <a href="http://www.lua.inf.puc-rio.br/">
-                <img src="img/lablua.png" width="100">
-            </a>
-            &nbsp;&nbsp;&nbsp;
-            <a href="http://www.uerj.br/idiomas.php#gb">
-                <img src="img/uerj.gif"   width="50">
-            </a>
-        </div>
-    </div>
-</div>
 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
 
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
