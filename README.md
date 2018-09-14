@@ -36,7 +36,7 @@ interative tutorial for the language (refer to Try.php section of this
 document, in order to find out more information about it).
 
 This page also gives a brief explanation of the language, sided with a
-small piece of code that highlights major features of C�u.
+small piece of code that highlights major features of Céu.
 
 Twitter's Bootstrap was used to make the layout of the page.
 
@@ -61,7 +61,7 @@ The body of the page, features four sections:
     with *label* classes.
 -   **Results** panel: displays the results of the code
     **compilation** and **execution**.
--   **Code** panel: where the user should enter C�u source code
+-   **Code** panel: where the user should enter Céu source code
 -   **Input** panel: if necessary, where input can be given to the
     program.
 
@@ -75,7 +75,7 @@ regarding the code can be found in the source files.
 Run.php
 =======
 
-The file which receives, compiles and executes C�u code. It expects to
+The file which receives, compiles and executes Céu code. It expects to
 receive the following data:
 
 -   **samples**: the **id** for the current lesson
