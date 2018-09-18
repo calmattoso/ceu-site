@@ -1,0 +1,32 @@
+<language name="C++" version="1" kateversion="2.4" section="Sources" extensions="*.cpp;*.h">
+<highlighting>
+    <list name="somename">
+      <item> var </item>
+      <item> int </item>
+      <item> par </item>
+      <item> or </item>
+      <item> do </item>
+      <item> with </item>
+      <item> end </item>
+      <item> every </item>
+      <item> await </item>
+      <item> input </item>
+    </list>
+    <contexts>
+      <context attribute="Normal Text" lineEndContext="#pop" name="Normal Text" >
+        <keyword attribute="Keyword" context="#stay" String="somename" />
+      </context>
+    </contexts>
+    <itemDatas>
+      <itemData name="Normal Text" defStyleNum="dsNormal" />
+      <itemData name="Keyword" defStyleNum="dsKeyword" />
+    </itemDatas>
+  </highlighting>
+  
+  <general>
+    <comments>
+      <comment name="singleLine" start="#"/>
+    </comments>
+    <keywords casesensitive="1"/>
+  </general>
+</language>

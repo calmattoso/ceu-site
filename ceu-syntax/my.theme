@@ -1,0 +1,13 @@
+{
+    "text-color": "#212529",
+    "background-color": "#f5f5f5",
+    "text-styles": {
+        "Keyword": {
+            "text-color": "#212529",
+            "background-color": null,
+            "bold": true,
+            "italic": false,
+            "underline": false
+        }
+    }
+}

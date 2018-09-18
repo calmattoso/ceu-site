@@ -4,274 +4,283 @@
 <head>
     <meta name="google-site-verification" content="RDYvXYsBIo4wG6gdcvtWqDgOmeRJXWxVDm0blmpvBVI"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-    <title>C&eacute;u: The Programming Language</title>
+    <title></title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
     <link href="css/index.css" rel="stylesheet">  <!-- Index css -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style type="text/css"></style>
+
     <script src="js/bootstrap.min.js"></script>
+
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-ceu-blue">
-    <a class="navbar-brand" href="./index.html">
-        <img src="./img/ceu-ico.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-ceu-blue">
+<a class="navbar-brand" href="./index.html">
+    <img src="./img/ceu-ico.png" width="30" height="30" class="d-inline-block align-top" alt="">
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        
-        <li class="nav-item dropdown">
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+    </li>
+    
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Learn
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" target="_blank" href="./try.php">Online Tutorial</a>
+        <a class="dropdown-item" href="manuals.html">Manuals</a>
+        <a class="dropdown-item" href="tutorials.html">Tutorials</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" target="_blank" href="http://www.ceu-lang.org/chico/#ceu">Academic papers</a>
+    </div>
+    </li>
+
+    <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Learn
+            Downloads
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" target="_blank" href="./try.php">Online Tutorial</a>
-            <a class="dropdown-item" href="manuals.html">Manuals</a>
-            <a class="dropdown-item" href="tutorials.html">Tutorials</a>
+            <a class="dropdown-item" target="_blank" href="https://github.com/ceu-lang/ceu">Céu</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" target="_blank" href="http://www.ceu-lang.org/chico/#ceu">Academic papers</a>
+            <a class="dropdown-item" target="_blank" href="https://github.com/ceu-lang/ceu-arduino">Céu-Arduino</a>
+            <a class="dropdown-item" target="_blank" href="https://github.com/ceu-lang/ceu-libuv">Céu-libuv</a>
+            <a class="dropdown-item" target="_blank" href="https://github.com/ceu-lang/ceu-sdl">Céu-SDL</a>
+            <a class="dropdown-item" target="_blank" href="https://github.com/ceu-lang/pico-ceu">pico-Céu</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" target="_blank" href="https://github.com/ceu-lang/ceu-maker/releases">Céu-Maker</a>
+            <a class="dropdown-item" href="./cib/">Céu in a Box VM</a>
         </div>
-        </li>
+    </li> 
 
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Downloads
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" target="_blank" href="https://github.com/ceu-lang/ceu">Céu</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" target="_blank" href="https://github.com/ceu-lang/ceu-arduino">Céu-Arduino</a>
-                <a class="dropdown-item" target="_blank" href="https://github.com/ceu-lang/ceu-libuv">Céu-libuv</a>
-                <a class="dropdown-item" target="_blank" href="https://github.com/ceu-lang/ceu-sdl">Céu-SDL</a>
-                <a class="dropdown-item" target="_blank" href="https://github.com/ceu-lang/pico-ceu">pico-Céu</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" target="_blank" href="https://github.com/ceu-lang/ceu-maker/releases">Céu-Maker</a>
-                <a class="dropdown-item" href="./cib/">Céu in a Box VM</a>
-            </div>
-        </li> 
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Contact
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" target="_blank" href="http://groups.google.com/group/ceu-lang">Mailing list</a>
+            <a class="dropdown-item" target="_blank" href="https://gitter.im/fsantanna/ceu">Online chat</a>
+        </div>
+    </li>                   
+</ul>
 
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Contact
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" target="_blank" href="http://groups.google.com/group/ceu-lang">Mailing list</a>
-                <a class="dropdown-item" target="_blank" href="https://gitter.im/fsantanna/ceu">Online chat</a>
-            </div>
-        </li>                   
+<a class="header-logo-invertocat" style="fill:white;" target="_blank" href="https://github.com/ceu-lang/" data-hotkey="g d" aria-label="GitHub Org">
+    <svg height="32" viewBox="0 0 16 16" version="1.1" width="25" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
 
-    </ul>
-
-
-    <a class="header-logo-invertocat" style="fill:white;" target="_blank" href="https://github.com/ceu-lang/" data-hotkey="g d" aria-label="GitHub Org">
-        <svg height="32" viewBox="0 0 16 16" version="1.1" width="25" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-    </a>
-
-
-    </div>
+</div>
 </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1 id="manuals">Manuals</h1>
-                <h2 id="latest-manuals">Latest Manuals</h2>
-                <p>The pre-v0.40 is not a stable version. However, it is recommended the usage of its documentation (when available) instead of the older ones because it is more complete.</p>
-                <table>
-                <thead>
-                <tr class="header">
-                <th></th>
-                <th>Online</th>
-                <th>PDF</th>
-                <th>Markdown</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="odd">
-                <td>Céu</td>
-                <td><a target="_blank" href="https://ceu-lang.github.io/ceu/out/manual/v0.30/">v0.30</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.30/ceu-v0.30.pdf">v0.30</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.30/ceu-v0.30.md">v0.30</a></td>
-                </tr>
-                <tr class="even">
-                <td>Céu-Arduino</td>
-                <td><a target="_blank" href="https://ceu-lang.github.io/ceu-arduino/out/manual/v0.20/">v0.20</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu-arduino/blob/master/docs/manual/v0.20/ceu-arduino-v0.20.pdf">v0.20</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu-arduino/blob/master/docs/manual/v0.20/ceu-arduino-v0.20.md">v0.20</a></td>
-                </tr>
-                <tr class="odd">
-                <td>Céu-SDL</td>
-                <td><a target="_blank" href="https://ceu-lang.github.io/ceu-sdl/out/manual/v0.20/">v0.20</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu-sdl/blob/master/docs/manual/v0.20/ceu-sdl-v0.20.pdf">v0.20</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu-sdl/blob/master/docs/manual/v0.20/ceu-sdl-v0.20.md">v0.20</a></td>
-                </tr>
-                <tr class="even">
-                <td>Pico-Céu</td>
-                <td><a target="_blank" href="https://ceu-lang.github.io/pico-ceu/out/manual/v0.30/">v0.30</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/blob/pre-v0.40/docs/manual/v0.40/pico-ceu-v0.40.pdf">pre-v0.40</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/blob/pre-v0.40/docs/manual/v0.40/pico-ceu-v0.40.md">pre-v0.40</a></td>
-                </tr>
-                </tbody>
-                </table>
-                <h2 id="all-manuals">All Manuals</h2>
-                <h3 id="céu">Céu</h3>
-                <table>
-                <thead>
-                <tr class="header">
-                <th>Version</th>
-                <th>Online</th>
-                <th>PDF</th>
-                <th>Markdown</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="odd">
-                <td>pré-v0.40</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                </tr>
-                <tr class="even">
-                <td>v0.30</td>
-                <td><a target="_blank" href="https://ceu-lang.github.io/ceu/out/manual/v0.30/">Online</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.30/ceu-v0.30.pdf">PDF</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.30/ceu-v0.30.md">Markdown</a></td>
-                </tr>
-                <tr class="odd">
-                <td>v0.20</td>
-                <td><a target="_blank" href="https://ceu-lang.github.io/ceu/out/manual/v0.20/">Online</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.20/ceu-v0.20.pdf">PDF</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.20/ceu-v0.20.md">Markdown</a></td>
-                </tr>
-                <tr class="even">
-                <td>v0.10</td>
-                <td><a target="_blank" href="https://ceu-lang.github.io/ceu/out/manual/v0.10/">Online</a></td>
-                <td>-</td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.10/manual-v0.10.md">Markdown</a></td>
-                </tr>
-                <tr class="odd">
-                <td>v0.8</td>
-                <td><a target="_blank" href="https://ceu-lang.github.io/ceu/out/manual/v0.8/">Online</a></td>
-                <td>-</td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.8/manual-v0.8.md">Markdown</a></td>
-                </tr>
-                </tbody>
-                </table>
-                <h3 id="céu-arduino">Céu-Arduino</h3>
-                <table>
-                <thead>
-                <tr class="header">
-                <th>Version</th>
-                <th>Online</th>
-                <th>PDF</th>
-                <th>Markdown</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="odd">
-                <td>pré-v0.40</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                </tr>
-                <tr class="even">
-                <td>v0.30</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                </tr>
-                <tr class="odd">
-                <td>v0.20</td>
-                <td><a target="_blank" href="https://ceu-lang.github.io/ceu-arduino/out/manual/v0.20/">Online</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu-arduino/blob/master/docs/manual/v0.20/ceu-arduino-v0.20.pdf">PDF</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu-arduino/blob/master/docs/manual/v0.20/ceu-arduino-v0.20.md">Markdown</a></td>
-                </tr>
-                </tbody>
-                </table>
-                <h3 id="céu-sdl">Céu-SDL</h3>
-                <table>
-                <thead>
-                <tr class="header">
-                <th>Version</th>
-                <th>Online</th>
-                <th>PDF</th>
-                <th>Markdown</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="odd">
-                <td>pré-v0.40</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                </tr>
-                <tr class="even">
-                <td>v0.30</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                </tr>
-                <tr class="odd">
-                <td>v0.20</td>
-                <td><a target="_blank" href="https://ceu-lang.github.io/ceu-sdl/out/manual/v0.20/">Online</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu-sdl/blob/master/docs/manual/v0.20/ceu-sdl-v0.20.pdf">PDF</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/ceu-sdl/blob/master/docs/manual/v0.20/ceu-sdl-v0.20.md">Markdown</a></td>
-                </tr>
-                </tbody>
-                </table>
-                <h3 id="pico-céu">pico-Céu</h3>
-                <table>
-                <thead>
-                <tr class="header">
-                <th>Version</th>
-                <th>Online</th>
-                <th>PDF</th>
-                <th>Markdown</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="odd">
-                <td>pré-v0.40</td>
-                <td>-</td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/blob/pre-v0.40/docs/manual/v0.40/pico-ceu-v0.40.pdf">pre-v0.40</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/blob/pre-v0.40/docs/manual/v0.40/pico-ceu-v0.40.md">pre-v0.40</a></td>
-                </tr>
-                <tr class="even">
-                <td>v0.30</td>
-                <td><a target="_blank" href="https://ceu-lang.github.io/pico-ceu/out/manual/v0.30/">Online</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/blob/master/docs/manual/v0.30/pico-ceu-v0.30.pdf">PDF</a></td>
-                <td><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/blob/master/docs/manual/v0.30/pico-ceu-v0.30.md">Markdown</a></td>
-                </tr>
-                </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="row"  style="margin-top:60px; margin-bottom:20px;">
-            <div class="col text-center">
-                <hr>
-                <a href="http://www.lua.inf.puc-rio.br/">
-                    <img src="img/lablua.png" width="100">
-                </a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="http://www.uerj.br/idiomas.php#gb">
-                    <img src="img/uerj.gif"   width="50">
-                </a>
-            </div>
-        </div>
-    </div>
+
+
+<div class="container">
+
+<!-- begin main content row-->
+<div class="row main-content">
+<div class="col-12">
+<h1 id="manuals">Manuals</h1>
+<h2 id="latest-manuals">Latest Manuals</h2>
+<p>The pre-v0.40 is not a stable version. However, it is recommended the usage of its documentation (when available) instead of the older ones because it is more complete.</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Online</th>
+<th>PDF</th>
+<th>Markdown</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Céu</td>
+<td><a target="_blank" href="https://ceu-lang.github.io/ceu/out/manual/v0.30/">v0.30</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.30/ceu-v0.30.pdf">v0.30</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.30/ceu-v0.30.md">v0.30</a></td>
+</tr>
+<tr class="even">
+<td>Céu-Arduino</td>
+<td><a target="_blank" href="https://ceu-lang.github.io/ceu-arduino/out/manual/v0.20/">v0.20</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu-arduino/blob/master/docs/manual/v0.20/ceu-arduino-v0.20.pdf">v0.20</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu-arduino/blob/master/docs/manual/v0.20/ceu-arduino-v0.20.md">v0.20</a></td>
+</tr>
+<tr class="odd">
+<td>Céu-SDL</td>
+<td><a target="_blank" href="https://ceu-lang.github.io/ceu-sdl/out/manual/v0.20/">v0.20</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu-sdl/blob/master/docs/manual/v0.20/ceu-sdl-v0.20.pdf">v0.20</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu-sdl/blob/master/docs/manual/v0.20/ceu-sdl-v0.20.md">v0.20</a></td>
+</tr>
+<tr class="even">
+<td>Pico-Céu</td>
+<td><a target="_blank" href="https://ceu-lang.github.io/pico-ceu/out/manual/v0.30/">v0.30</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/blob/pre-v0.40/docs/manual/v0.40/pico-ceu-v0.40.pdf">pre-v0.40</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/blob/pre-v0.40/docs/manual/v0.40/pico-ceu-v0.40.md">pre-v0.40</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="all-manuals">All Manuals</h2>
+<h3 id="céu">Céu</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Version</th>
+<th>Online</th>
+<th>PDF</th>
+<th>Markdown</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pré-v0.40</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>v0.30</td>
+<td><a target="_blank" href="https://ceu-lang.github.io/ceu/out/manual/v0.30/">Online</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.30/ceu-v0.30.pdf">PDF</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.30/ceu-v0.30.md">Markdown</a></td>
+</tr>
+<tr class="odd">
+<td>v0.20</td>
+<td><a target="_blank" href="https://ceu-lang.github.io/ceu/out/manual/v0.20/">Online</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.20/ceu-v0.20.pdf">PDF</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.20/ceu-v0.20.md">Markdown</a></td>
+</tr>
+<tr class="even">
+<td>v0.10</td>
+<td><a target="_blank" href="https://ceu-lang.github.io/ceu/out/manual/v0.10/">Online</a></td>
+<td>-</td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.10/manual-v0.10.md">Markdown</a></td>
+</tr>
+<tr class="odd">
+<td>v0.8</td>
+<td><a target="_blank" href="https://ceu-lang.github.io/ceu/out/manual/v0.8/">Online</a></td>
+<td>-</td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu/blob/master/docs/manual/v0.8/manual-v0.8.md">Markdown</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="céu-arduino">Céu-Arduino</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Version</th>
+<th>Online</th>
+<th>PDF</th>
+<th>Markdown</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pré-v0.40</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>v0.30</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>v0.20</td>
+<td><a target="_blank" href="https://ceu-lang.github.io/ceu-arduino/out/manual/v0.20/">Online</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu-arduino/blob/master/docs/manual/v0.20/ceu-arduino-v0.20.pdf">PDF</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu-arduino/blob/master/docs/manual/v0.20/ceu-arduino-v0.20.md">Markdown</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="céu-sdl">Céu-SDL</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Version</th>
+<th>Online</th>
+<th>PDF</th>
+<th>Markdown</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pré-v0.40</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>v0.30</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>v0.20</td>
+<td><a target="_blank" href="https://ceu-lang.github.io/ceu-sdl/out/manual/v0.20/">Online</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu-sdl/blob/master/docs/manual/v0.20/ceu-sdl-v0.20.pdf">PDF</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/ceu-sdl/blob/master/docs/manual/v0.20/ceu-sdl-v0.20.md">Markdown</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pico-céu">pico-Céu</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Version</th>
+<th>Online</th>
+<th>PDF</th>
+<th>Markdown</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pré-v0.40</td>
+<td>-</td>
+<td><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/blob/pre-v0.40/docs/manual/v0.40/pico-ceu-v0.40.pdf">pre-v0.40</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/blob/pre-v0.40/docs/manual/v0.40/pico-ceu-v0.40.md">pre-v0.40</a></td>
+</tr>
+<tr class="even">
+<td>v0.30</td>
+<td><a target="_blank" href="https://ceu-lang.github.io/pico-ceu/out/manual/v0.30/">Online</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/blob/master/docs/manual/v0.30/pico-ceu-v0.30.pdf">PDF</a></td>
+<td><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/blob/master/docs/manual/v0.30/pico-ceu-v0.30.md">Markdown</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div> <!-- end main content row-->
+
+<!-- begin footer-->
+<div class="row"  style="margin-top:60px; margin-bottom:20px;">
+<div class="col text-center">
+<hr>
+<a href="http://www.lua.inf.puc-rio.br/">
+    <img src="img/lablua.png" width="100">
+</a>
+&nbsp;&nbsp;&nbsp;
+<a href="http://www.uerj.br/idiomas.php#gb">
+    <img src="img/uerj.gif"   width="50">
+</a>
+</div>
+</div> <!-- end footer row-->
+
+
+</div> <!-- end container-->
     
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>
