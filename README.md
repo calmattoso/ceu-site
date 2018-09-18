@@ -38,7 +38,7 @@ document, in order to find out more information about it).
 This page also gives a brief explanation of the language, sided with a
 small piece of code that highlights major features of Céu.
 
-Twitter's Bootstrap was used to make the layout of the page.
+Bootstrap 4 was used to make the layout of the page.
 
 Try.php
 =======
@@ -88,8 +88,19 @@ receive the following data:
 
 Pandoc
 =======
-Some pages, such as manuals.html and tutorials.html are generated using [pandoc](https://pandoc.org/MANUAL.html), a Haskell library for converting from one markup format to another, and a command-line tool that uses this library. To update the content of a page ```NAME.html```, edit the same name markdown located at ```md``` folder.
+Some pages, such as manuals.html and tutorials.html, are generated using [pandoc](https://pandoc.org/MANUAL.html) 2.3.1, a Haskell library for converting from one markup format to another, and a command-line tool that uses this library. 
+
+To update the content of a page ```NAME.html```, first download pandoc 2.3 ([download link](https://github.com/jgm/pandoc/releases/tag/2.3)).
+
+Then, edit the corresponding markdown file located at ```md``` folder.
 
 ```
 pandoc -s -o NAME.html --template=template.html md/NAME.md
 ```
+
+The index.html is generated use the following command:
+```
+pandoc -s -o index.html md/index.md metadata.yaml --template=template.html --syntax-definition=ceu-syntax/ceu.xml --highlight-style ceu-syntax/my.theme
+```
+
+The ```metadata.yaml``` is necessary to include the gray top section of the site. The ```syntax-definition``` and ```highlight-style```, by the other hand, are necessary to highlight Céu code. The highlight do not cover the whole Céu syntax, but is useful to prevent use of the HTML tag ```bold``` to highlight code. 
