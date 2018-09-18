@@ -9,7 +9,7 @@ Try the Online Tutorial!
 
 #### This is what <span class="ceu-text">C&eacute;u</span> looks like:
 
-```cpp
+```ceu
 input int KEY;  
 par/or do  
   every 1s do  
@@ -64,7 +64,7 @@ frameborder="0" allowfullscreen>
     - <a target="_blank" href="https://github.com/ceu-lang/ceu-libuv">   Céu-libuv   </a>
     - <a target="_blank" href="https://github.com/ceu-lang/ceu-sdl">     Céu-SDL     </a>
     - <a target="_blank" href="https://github.com/ceu-lang/pico-ceu">     pico-Céu    </a>
-- <a href="./cib/">Céu in a Box VM </a>
+- <a href="cib.html">Céu in a Box VM </a>
 - <a target="_blank" href="https://github.com/ceu-lang/ceu-maker/releases">Céu-Maker</a>
 </div>
 </div>

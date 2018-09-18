@@ -1,30 +1,27 @@
-<title>Céu in a Box</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/></p>
-
 # Céu in a Box
 
-<img src="cib.png" with="200" align="right">
+<img src="img/cib-big.png" with="200" align="right">
 
-*Céu in a Box (CiB)* is a distribution of [Xubuntu](http://xubuntu.org/) that
+*Céu in a Box (CiB)* is a distribution of <a target="_blank" href="http://xubuntu.org/">Xubuntu</a> that
 comes pre-installed with Céu.
 
 The distribution contains the compiler together with bindings for the
 environments
-    [Arduino](http://github.com/fsantanna/ceu-arduino),
-    [libuv](http://github.com/fsantanna/ceu-libuv), and
-    [SDL](http://github.com/fsantanna/ceu-sdl).
+    <a target="_blank" href="http://github.com/fsantanna/ceu-arduino">Arduino</a>,
+    <a target="_blank" href="http://github.com/fsantanna/ceu-libuv">libuv</a>, and
+    <a target="_blank" href="http://github.com/fsantanna/ceu-sdl">SDL</a>.
 
-CiB is distributed as a single <tt>.ova</tt> file to be used with
-[VirtualBox](http://www.virtualbox.org/).
+CiB is distributed as a single `.ova` file to be used with
+<a target="_blank" href="http://www.virtualbox.org/">VirtualBox</a>.
 
-- [Download CiB-v0.20 (2.3Gb)](http://www.ceu-lang.org/CiB-v0.20.ova)
+- <a target="_blank" href="http://www.ceu-lang.org/CiB-v0.20.ova">Download CiB-v0.20 (2.3Gb)</a>
 <!--
 - [Release History](https://github.com/fsantanna/ceu/blob/master/HISTORY)
 -->
 
 After downloading CiB, import it to VirtualBox:
 
-<img src="cib-vb.png" with="400">
+<img src="img/cib-vb.png" style="width:100%;">
 
 The usename and password for CiB are both `ceu`:
 

@@ -1,4 +1,4 @@
-<language name="C++" version="1" kateversion="2.4" section="Sources" extensions="*.cpp;*.h">
+<language name="C++" version="1" kateversion="2.4" section="Sources" extensions="*.ceu">
 <highlighting>
     <list name="somename">
       <item> var </item>

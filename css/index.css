@@ -3,7 +3,7 @@
   margin-bottom: 5px !important;
 } 
 
-.sourceCode .ceu{
+pre > code{
   color: #212529;
   display: block;
   padding: 9.5px;
@@ -12,12 +12,13 @@
   word-break: break-all;
   word-wrap: break-word;
   white-space: pre-wrap;
+
   background-color: #f5f5f5;
   border: 1px solid #ccc;
   border: 1px solid rgba(0,0,0,0.15);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 4px;    
 }
 
 #ceu-header {

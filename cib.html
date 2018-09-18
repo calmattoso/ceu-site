@@ -4,13 +4,13 @@
 <head>
     <meta name="google-site-verification" content="RDYvXYsBIo4wG6gdcvtWqDgOmeRJXWxVDm0blmpvBVI"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-    <title>$title$</title>
+    <title></title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
     <link href="css/index.css" rel="stylesheet">  <!-- Index css -->
     <link href="css/style.css" rel="stylesheet">
 
-    <style type="text/css">$highlighting-css$</style>
+    <style type="text/css"></style>
 
     <script src="js/bootstrap.min.js"></script>
 
@@ -80,14 +80,56 @@
 </div>
 </nav>
 
-$cabecalho$
+
 
 <div class="container">
 
 <!-- begin main content row-->
 <div class="row main-content">
 <div class="col-12">
-$body$
+<h1 id="céu-in-a-box">Céu in a Box</h1>
+<p><img src="img/cib-big.png" with="200" align="right"></p>
+<p><em>Céu in a Box (CiB)</em> is a distribution of <a target="_blank" href="http://xubuntu.org/">Xubuntu</a> that comes pre-installed with Céu.</p>
+<p>The distribution contains the compiler together with bindings for the environments <a target="_blank" href="http://github.com/fsantanna/ceu-arduino">Arduino</a>, <a target="_blank" href="http://github.com/fsantanna/ceu-libuv">libuv</a>, and <a target="_blank" href="http://github.com/fsantanna/ceu-sdl">SDL</a>.</p>
+<p>CiB is distributed as a single <code>.ova</code> file to be used with <a target="_blank" href="http://www.virtualbox.org/">VirtualBox</a>.</p>
+<ul>
+<li><a target="_blank" href="http://www.ceu-lang.org/CiB-v0.20.ova">Download CiB-v0.20 (2.3Gb)</a> <!--
+- [Release History](https://github.com/fsantanna/ceu/blob/master/HISTORY)
+--></li>
+</ul>
+<p>After downloading CiB, import it to VirtualBox:</p>
+<p><img src="img/cib-vb.png" style="width:100%;"></p>
+<p>The usename and password for CiB are both <code>ceu</code>:</p>
+<pre><code>Username: ceu
+Password: ceu</code></pre>
+<p>After logging in, open a terminal window and type the following commands to check if everything is ok:</p>
+<pre><code>$ cd ceu/ceu/tst
+$ ./run             # some examples might not compile because of the gcc version</code></pre>
+<p>The directory structure of CiB is as follows:</p>
+<pre><code>  - /home/ceu/              # home dir for the user &quot;ceu&quot;
+    - arduino-1.8.1/        # distribution from http://arduino.cc
+    - ceu/
+      - ceu/                # clone of http://github.com/fsantanna/ceu/
+      - ceu-arduino/        # clone of http://github.com/fsantanna/ceu-arduino/
+      - ceu-libuv/          # clone of http://github.com/fsantanna/ceu-libuv/
+      - ceu-sdl/            # clone of http://github.com/fsantanna/ceu-sdl/
+        - ceu-sdl-leds/     # clone of http://github.com/fsantanna/ceu-sdl-leds/
+        - ceu-sdl-birds/    # clone of http://github.com/fsantanna/ceu-sdl-birds/
+        - ceu-sdl-storm/    # clone of http://github.com/fsantanna/ceu-sdl-storm/</code></pre>
+<h2 id="keeping-cib-up-to-date">Keeping CiB up-to-date</h2>
+<pre><code>$ cd ~/ceu/ceu/
+$ git pull
+$ make
+$ sudo make install
+
+$ cd ~/ceu/ceu-arduino/
+$ git pull
+
+$ cd ~/ceu/ceu-libuv/
+$ git pull
+
+$ cd ~/ceu/ceu-sdl/
+$ git pull</code></pre>
 </div>
 </div> <!-- end main content row-->
 
