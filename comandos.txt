@@ -1,3 +1,0 @@
-pandoc -s -o manuals.html --template=template.html md/manuals.md metadata.yaml
-
-pandoc -s -o tutorials.html --template=template.html md/tutorials/tutorials.md metadata.yaml
