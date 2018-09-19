@@ -259,14 +259,16 @@ v0.30
 <blink>UNDER MAINTENANCE</blink>
 -->
                 <span id="ceu-font-controls">
-                  <button id="ceu-font-decrease" class="btn btn-mini" alt="Decrease font size." title="Decrease font size"><i class="icon-minus-sign"></i></button>
+                  <button id="ceu-font-decrease" class="btn btn-small" alt="Decrease font size." title="Decrease font size">-</button>
                   Font
-                  <button id="ceu-font-increase" class="btn btn-mini" alt="Increase font size." title="Increase font size"><i class="icon-plus-sign"></i></button>
+                  <button id="ceu-font-increase" class="btn btn-small" alt="Increase font size." title="Increase font size">+</button>
                 </span>
-                <span class="pull-right">
-                <button type="button" class="btn btn-small" data-toggle="modal" data-target="#ceu-index-modal" title="View Table of Contents">
-                  <i class="icon-list"></i> Index
-                </button>
+                <span class="pull-right ceu-pages">
+
+                  <button type="button" class="btn btn-small" data-toggle="modal" data-target="#ceu-index-modal" title="Index">
+                  Index
+                  </button>
+
                   <button id="ceu-left" type="button" class="btn btn-small" title="Previous lesson">&lt;</button>
                   <span id="ceu-slide-number">1</span>
                   <button id="ceu-next" type="button" class="btn btn-small" title="Next lesson">&gt;</button>
@@ -317,23 +319,32 @@ v0.30
       </div>
     </div>
     
-    <!-- Modals -->
-    <div id="ceu-index-modal" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3>Tutorial Lessons</h3>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="ceu-index-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ol>
+            <?php
+              foreach($lessons as $key => $data){
+                if($key == "bug") continue;
+                echo "<li data-lesson-id=\"$key\"><a href=\"#\">" . $lessons[$key]['name'] . "</a></li>\n";
+              }
+            ?>
+          </ol>
+        </div>
       </div>
-      <div class="modal-body">
-        <ol>
-          <?php
-            foreach($lessons as $key => $data){
-              if($key == "bug") continue;
-              echo "<li data-lesson-id=\"$key\"><a href=\"#\">" . $lessons[$key]['name'] . "</a></li>\n";
-            }
-          ?>
-        </ol>
-      </div>
-      <div class="modal-footer"></div>
-    </div> 
+    </div>
+  </div>
+
+
   </body>
 </html>

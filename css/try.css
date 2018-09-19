@@ -69,8 +69,13 @@ textarea {
     margin-right: 20px;
 }
 
-#ceu-slide div.ceu-textbar span.pull-right  .btn {
-    margin-top: -10px;
+.btn-small{
+    height: 35px;
+    margin-top:-2px;
+}
+
+.ceu-pages > .btn-small{
+    margin-top: -12px;
 }
 
 #ceu-slide div.relative {
@@ -195,7 +200,7 @@ textarea {
     font-family: "Courier New", "Ubuntu";
 }
 
-/* Céu specific and utility classes */
+/* Cï¿½u specific and utility classes */
 .ceu-textbar {
     width: 100%;
     background-color: #F8F8F8;
@@ -212,4 +217,8 @@ textarea {
 
 .relative {
     position: relative;
+}
+
+#ceu-results > div.relative, #ceu-input > div.relative{
+    height: 98%;
 }
