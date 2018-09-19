@@ -2,7 +2,7 @@
 
 ## Latest Manuals
 
-The pre-v0.40 is not a stable version. However, it is recommended the usage of its documentation (when available) instead of the older ones because it is more complete.
+The pre-v0.40 is a preview version. However, it is recommended the usage of its documentation (when available) instead of the older ones because it is more complete.
 
 |             | Online | PDF | Markdown  |
 |-------------|--------|-----|-----------|
