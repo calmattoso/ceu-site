@@ -44,8 +44,13 @@ body {
   background-image: url('img/subtle_dots_@2X.png');
   background-repeat: repeat;
 }
+.ceu-main-img{
+  max-width: 400px;
+  width: 75%;
+}
 .container{
-  width:900px;
+  max-width:900px;
+  width: 100%;
 }
 .jumbotron{
   padding:40px 0px 5px 0px;
@@ -113,3 +118,12 @@ body {
     text-justify:inter-word;
     padding:10px;
 }
+
+/* navbar-toggler */
+.navbar-toggler{
+  border: none !important;
+}
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+/* navbar-toggler */

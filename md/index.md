@@ -1,7 +1,7 @@
 
 <div class="row" style="justify-content:center;">
 
-<div class="col-5">
+<div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
 <a target="_blank" href="./try.php" class="btn btn-large btn-primary btn-block">
 Try the Online Tutorial!
 </a>
@@ -24,7 +24,7 @@ end
 key press.)</small></i>
 
 </div>
-<div class="col">
+<div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
 <iframe style="width: 100%;" height="330"
 src="https://www.youtube.com/embed/Jkcv-YXhh_U"
 frameborder="0" allowfullscreen>
@@ -32,7 +32,7 @@ frameborder="0" allowfullscreen>
 </div>
 </div>
 <div class="row">
-<div class="col-5">
+<div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
 
 ## Features
 - Structured event handling
@@ -43,7 +43,7 @@ frameborder="0" allowfullscreen>
 - Support for asynchronous threads
 
 </div>
-<div class="col-3">
+<div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
 
 ## Learn
 - <a target="_blank" href="./try.php">Online tutorial</a> </li>
@@ -55,7 +55,7 @@ frameborder="0" allowfullscreen>
 
 </div>
 
-<div class="col-4">
+<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 ## Downloads
 
 - <a href="https://github.com/ceu-lang/ceu"> Céu </a>

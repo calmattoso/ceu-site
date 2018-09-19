@@ -3,7 +3,7 @@ title: Céu The Programming Language
 cabecalho: |
   <div class="jumbotron">
   <div class="text-center">
-  <img src="img/ceu.png" width="400">
+  <img src="img/ceu.png" class="ceu-main-img">
   <p class="lead">
   <h1 class="display-6">The Programming Language</h1>
   <p class="lead">"Structured Synchronous Reactive Programming"</p>
