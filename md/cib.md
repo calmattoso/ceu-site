@@ -1,6 +1,6 @@
 # Céu in a Box
 
-<img src="img/cib-big.png" with="200" align="right">
+<img src="assets/img/cib-big.png" with="200" align="right">
 
 *Céu in a Box (CiB)* is a distribution of <a target="_blank" href="http://xubuntu.org/">Xubuntu</a> that
 comes pre-installed with Céu.
@@ -21,7 +21,7 @@ CiB is distributed as a single `.ova` file to be used with
 
 After downloading CiB, import it to VirtualBox:
 
-<img src="img/cib-vb.png" style="width:100%;">
+<img src="assets/img/cib-vb.png" style="width:100%;">
 
 The usename and password for CiB are both `ceu`:
 

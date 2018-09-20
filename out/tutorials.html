@@ -5,15 +5,15 @@
     <meta name="google-site-verification" content="RDYvXYsBIo4wG6gdcvtWqDgOmeRJXWxVDm0blmpvBVI"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Céu - CiB</title>
+    <title>Céu - Tutorials</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
-    <link href="css/index.css" rel="stylesheet">  <!-- Index css -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
+    <link href="assets/css/index.css" rel="stylesheet">  <!-- Index css -->
+    <link href="assets/css/style.css" rel="stylesheet">
 
     <style type="text/css"></style>
 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -21,7 +21,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-ceu-blue">
 <a class="navbar-brand" href="./index.html">
-    <img src="./img/ceu-ico.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <img src="./assets/img/ceu-ico.png" width="30" height="30" class="d-inline-block align-top" alt="">
 </a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -88,49 +88,21 @@
 <!-- begin main content row-->
 <div class="row main-content">
 <div class="col-12">
-<h1 id="céu-in-a-box">Céu in a Box</h1>
-<p><img src="img/cib-big.png" with="200" align="right"></p>
-<p><em>Céu in a Box (CiB)</em> is a distribution of <a target="_blank" href="http://xubuntu.org/">Xubuntu</a> that comes pre-installed with Céu.</p>
-<p>The distribution contains the compiler together with bindings for the environments <a target="_blank" href="http://github.com/fsantanna/ceu-arduino">Arduino</a>, <a target="_blank" href="http://github.com/fsantanna/ceu-libuv">libuv</a>, and <a target="_blank" href="http://github.com/fsantanna/ceu-sdl">SDL</a>.</p>
-<p>CiB is distributed as a single <code>.ova</code> file to be used with <a target="_blank" href="http://www.virtualbox.org/">VirtualBox</a>.</p>
+<h1 id="tutorials">Tutorials</h1>
+<h2 id="pico-céu">pico-Céu</h2>
 <ul>
-<li><a target="_blank" href="http://www.ceu-lang.org/CiB-v0.20.ova">Download CiB-v0.20 (2.3Gb)</a> <!--
-- [Release History](https://github.com/fsantanna/ceu/blob/master/HISTORY)
---></li>
+<li><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/tree/pre-v0.40/examples/move-net">Move around using NETWORK features</a></li>
+<li><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/tree/pre-v0.40/examples/race-frames">Devolping a game using frames</li>
+<li><a target="_blank" href="https://github.com/ceu-lang/pico-ceu/tree/pre-v0.40/examples/race">Developing a game with pico-Céu from scratch</a></li>
 </ul>
-<p>After downloading CiB, import it to VirtualBox:</p>
-<p><img src="img/cib-vb.png" style="width:100%;"></p>
-<p>The usename and password for CiB are both <code>ceu</code>:</p>
-<pre><code>Username: ceu
-Password: ceu</code></pre>
-<p>After logging in, open a terminal window and type the following commands to check if everything is ok:</p>
-<pre><code>$ cd ceu/ceu/tst
-$ ./run             # some examples might not compile because of the gcc version</code></pre>
-<p>The directory structure of CiB is as follows:</p>
-<pre><code>  - /home/ceu/              # home dir for the user &quot;ceu&quot;
-    - arduino-1.8.1/        # distribution from http://arduino.cc
-    - ceu/
-      - ceu/                # clone of http://github.com/fsantanna/ceu/
-      - ceu-arduino/        # clone of http://github.com/fsantanna/ceu-arduino/
-      - ceu-libuv/          # clone of http://github.com/fsantanna/ceu-libuv/
-      - ceu-sdl/            # clone of http://github.com/fsantanna/ceu-sdl/
-        - ceu-sdl-leds/     # clone of http://github.com/fsantanna/ceu-sdl-leds/
-        - ceu-sdl-birds/    # clone of http://github.com/fsantanna/ceu-sdl-birds/
-        - ceu-sdl-storm/    # clone of http://github.com/fsantanna/ceu-sdl-storm/</code></pre>
-<h2 id="keeping-cib-up-to-date">Keeping CiB up-to-date</h2>
-<pre><code>$ cd ~/ceu/ceu/
-$ git pull
-$ make
-$ sudo make install
-
-$ cd ~/ceu/ceu-arduino/
-$ git pull
-
-$ cd ~/ceu/ceu-libuv/
-$ git pull
-
-$ cd ~/ceu/ceu-sdl/
-$ git pull</code></pre>
+<h2 id="pico-céu-with-céu-arduino">pico-Céu with Céu-Arduino</h2>
+<ul>
+<li><a target="_blank" href="https://github.com/ceu-lang/ceu-maker/tree/pre-v0.40/resources/both/examples/echo-usart">Serial communication - Echo app</a></li>
+</ul>
+<h2 id="céu-maker">Céu-Maker</h2>
+<ul>
+<li><a target="_blank" href="https://github.com/AnnyCaroline/ceu-maker-gsoc/blob/master/VSCode%20with%20C%C3%A9u-Maker/VSCode-with-ceu-maker.md">Develop for Céu-Arduino using VSCode</a></li>
+</ul>
 </div>
 </div> <!-- end main content row-->
 
@@ -139,11 +111,11 @@ $ git pull</code></pre>
 <div class="col text-center">
 <hr>
 <a href="http://www.lua.inf.puc-rio.br/">
-    <img src="img/lablua.png" width="100">
+    <img src="assets/img/lablua.png" width="100">
 </a>
 &nbsp;&nbsp;&nbsp;
 <a href="http://www.uerj.br/idiomas.php#gb">
-    <img src="img/uerj.gif"   width="50">
+    <img src="assets/img/uerj.gif"   width="50">
 </a>
 </div>
 </div> <!-- end footer row-->
@@ -154,7 +126,7 @@ $ git pull</code></pre>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 
 </body>
 </html>
