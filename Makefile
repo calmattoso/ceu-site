@@ -1,3 +1,5 @@
+OLD=$(shell head -n1 out/ceu)
+
 all:
 	pandoc -s -o out/index.html md/index.md metadata.yaml --template=template.html --syntax-definition=ceu-syntax/ceu.xml --highlight-style ceu-syntax/my.theme
 	pandoc -s -o out/manuals.html --template=template.html md/manuals.md --metadata=title:"Céu - Manuals"
@@ -11,6 +13,8 @@ clean:
 	rm -f out/template.html
 
 upload:
+	sed -i '1s|.*|#!../lua-5.3.3/src/lua|' out/ceu
 	cd out && rsync -e ssh -avL . fsantanna@ceu-lang.org:site/
+	sed -i '1s|.*|$(OLD)|' out/ceu
 
 .PHONY: cib

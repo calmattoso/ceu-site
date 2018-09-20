@@ -22,11 +22,6 @@ $ mkdir tmp/                    # should be writeable by the server user
 $ ln -s /usr/bin/timeout
 ```
 
-- `TODO` Edit `ceu` on the server:
-
-```
-#!../lua-5.3.3/src/lua
-```
 
 Index.html
 ==========
