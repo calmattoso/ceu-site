@@ -9,6 +9,11 @@ body > div.container-fluid {
     height: 98%;
 }
 
+.btn{
+    padding-top:0px;
+    padding-bottom:0px;
+}
+
 div.container-fluid div.row-fluid, #ceu-tutorial, #ceu-ide {
     height: 100%;
 }
@@ -43,26 +48,27 @@ textarea {
     right: 45%;
 }
 
-#ceu-slide  div.ceu-textbar {
-    line-height: 30px;
-}
-
 #ceu-slide  div.ceu-textbar  img{
     height: 30px;
-  margin-right: 10px;
-  margin-top: -6px;
+    margin-right: 10px;
+    /*margin-top: -6px;*/
 }
 
-#ceu-slide div.ceu-textbar span#ceu-font-controls   {
+/*#ceu-slide div.ceu-textbar span#ceu-font-controls   {
   font-size: 14px;
   position: absolute;
   left: 40%;
+}*/
+
+.ceu-textbar > span{
+    margin-left:25px;
 }
 
 #ceu-slide div.ceu-textbar  #ceu-slide-number {
-    font-size: 30px;
+    /* font-size: 30px; */
     font-weight: bold;
     padding: 0px 10px;
+    display:inline;
 }
 
 #ceu-slide div.ceu-textbar span.pull-right   {
@@ -71,12 +77,13 @@ textarea {
 
 .btn-small{
     height: 35px;
-    margin-top:-2px;
 }
 
+/*
 .ceu-pages > .btn-small{
     margin-top: -12px;
-}
+    background-color:red;
+}*/
 
 #ceu-slide div.relative {
     width: 100%;
@@ -150,7 +157,7 @@ textarea {
 
 #ceu-code #ceu-code-container {
     position: absolute;
-    top: 41px;
+    top: 45px;
     left: 0px;
     right: 0px;
     bottom: 0px;
@@ -185,7 +192,7 @@ textarea {
 
 #ceu-input #ceu-input-text {
     position: absolute;
-    top: 30px;
+    top: 33px;
     left: 0px;
     right: 0px;
     bottom: 0px;
@@ -209,6 +216,12 @@ textarea {
     font-size: 14px;
     padding: 5px 5px;
     border-bottom: 1px solid #EEE;
+    height: 45px;
+    line-height: 30px;
+}
+
+.ceu-textbar-min{
+    height: 32px;
 }
 
 .ceu-text {

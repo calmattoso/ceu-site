@@ -123,17 +123,17 @@
     <title>Try & Learn C&eacute;u</title>
     
     <!-- CSS files -->
-    <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
-    <link href="css/try.css" rel="stylesheet">  <!-- Online editor css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
+    <link href="assets/css/try.css" rel="stylesheet">  <!-- Online editor css -->
     
     <!-- JS files -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script>
       var Lessons = <?php echo json_encode($lessons); ?>;
       delete Lessons.bug;
     </script>
-    <script src="js/try.js"></script>
+    <script src="assets/js/try.js"></script>
     <script>
       $(document).ready(function() {
         var $code_textarea, $input_textarea;
@@ -158,7 +158,7 @@
         
         
         // Clicking on NEXT or PREVIOUS buttons
-        $("#ceu-slide .pull-right .btn").click(function(){
+        $("#ceu-slide .ceu-pages .btn").click(function(){
           if($(this).attr("id") === "ceu-next"){
             Slides.next();
           }
@@ -253,25 +253,30 @@
           <div id="ceu-slide">
             <div class="relative">
               <div class="ceu-textbar">
-                <a href="index.html"><img src="img/ceu.png"></a>
+                <a href="index.html">
+                  <img src="assets/img/ceu.png">
+                </a>
 v0.30
 <!--
 <blink>UNDER MAINTENANCE</blink>
 -->
-                <span id="ceu-font-controls">
+                
+                <span>
+                <button type="button" class="btn btn-small" data-toggle="modal" data-target="#ceu-index-modal" title="Index">
+                  Index
+                </button>
+                </span>
+
+                <span class="ceu-pages">
+                  <button id="ceu-left" type="button" class="btn btn-small" title="Previous lesson">&lt;</button>
+                  <div id="ceu-slide-number">1</div>
+                  <button id="ceu-next" type="button" class="btn btn-small" title="Next lesson">&gt;</button>
+                </span>
+
+                <span id="ceu-font-controls" class="ceu-pages">
                   <button id="ceu-font-decrease" class="btn btn-small" alt="Decrease font size." title="Decrease font size">-</button>
                   Font
                   <button id="ceu-font-increase" class="btn btn-small" alt="Increase font size." title="Increase font size">+</button>
-                </span>
-                <span class="pull-right ceu-pages">
-
-                  <button type="button" class="btn btn-small" data-toggle="modal" data-target="#ceu-index-modal" title="Index">
-                  Index
-                  </button>
-
-                  <button id="ceu-left" type="button" class="btn btn-small" title="Previous lesson">&lt;</button>
-                  <span id="ceu-slide-number">1</span>
-                  <button id="ceu-next" type="button" class="btn btn-small" title="Next lesson">&gt;</button>
                 </span>
               </div>
               <div id="ceu-slide-text">
@@ -283,7 +288,7 @@ v0.30
           
           <div id="ceu-results">
             <div class="relative">
-              <div class="ceu-textbar">Results</div>
+              <div class="ceu-textbar ceu-textbar-min">Results</div>
               <div id="ceu-results-text">
                 
               </div>
@@ -292,15 +297,15 @@ v0.30
         </div>
         
         <!-- Right columns -->
+        
         <div id="ceu-ide">
           <div id="ceu-code">
             <div class="relative">
               <div class="ceu-textbar">
-                Code
-                <div class="pull-right">
+                  Code
                   <button id="ceu-reset" type="button" class="btn btn-small" title="Reset lesson"> Reset</button>
                   <button id="ceu-run"   type="button" class="btn btn-small btn-primary" title="Compile and execute code">Run <i class="icon-play-circle icon-white"></i></button>
-                </div>
+
               </div>
               <div id="ceu-code-container">
                 <textarea></textarea>
@@ -309,7 +314,7 @@ v0.30
           </div>
           <div id="ceu-input">
             <div class="relative">
-              <div class="ceu-textbar">Input</div>
+              <div class="ceu-textbar ceu-textbar-min">Input</div>
               <div id="ceu-input-text">
                 <textarea></textarea>
               </div>
