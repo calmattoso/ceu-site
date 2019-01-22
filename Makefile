@@ -12,6 +12,7 @@ clean:
 	rm -f out/cib.html
 	rm -f out/manuals.html
 	rm -f out/template.html
+	rm -f out/publications.html
 
 upload:
 	sed -i '1s|.*|#!../lua-5.3.3/src/lua|' out/ceu
