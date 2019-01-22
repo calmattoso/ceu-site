@@ -5,6 +5,7 @@ all:
 	pandoc -s -o out/manuals.html --template=template.html md/manuals.md --metadata=title:"Céu - Manuals"
 	pandoc -s -o out/tutorials.html --template=template.html md/tutorials.md --metadata=title:"Céu - Tutorials"
 	pandoc -s -o out/cib.html --template=template.html md/cib.md --metadata=title:"Céu - CiB"
+	pandoc -s -o out/publications.html --template=template.html md/publications.md --metadata=title:"Céu - Publications"
 
 clean:
 	rm -f out/index.html
