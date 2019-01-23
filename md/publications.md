@@ -21,6 +21,10 @@
     - **Transparent Standby for Low-Power, Resource-Constrained Embedded Systems: A Programming Language-Based Approach**
     - interrupt service routines in Céu, power management, automatic standby
     - [ [pdf](chico/ceu_lctes18_short_pre.pdf) | [site][lctes18_site] ]
+- Final Graduation Project - Guilherme Simas
+    - **Aplicação em Sistemas Distribuídos utilizando biblioteca e driver próprios, baseados em interrupções desenvolvido em Céu para o microcontrolador Arduino**
+    - céu, distributed systems, eficiency, embedded systems
+    - [ [pdf](publications/guilherme-18.pdf) ]    
 
 ## 2017  
 - TECS journal paper
