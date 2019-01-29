@@ -13,6 +13,10 @@
 - PhD. Thesis - Matthias Terber
     - **Real-World Deployment and Evaluation of Synchronous Programming in Reactive Embedded Systems**
     - [ [pdf](http://sunsite.informatik.rwth-aachen.de/Publications/AIB/2018/2018-05.pdf) | [site][sunsite_site] ]
+- PhD. Thesis - Rodrigo Costa Mesquita Santos
+    - **A GALS Approach for Programming Distributed Interactive Multimedia Applications**
+    - Céu, multimedia, multi-device, determinism, consistency
+    - [ [pdf](publications/gals-rodrigo.pdf) ]    
 - LCTES conference paper
     - **A Memory-Bounded, Deterministic and Terminating Semantics for the Synchronous Programming Language Céu**
     - formal semantics of Céu, proofs for termination, determinism, and memory boundedness
