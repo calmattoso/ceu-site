@@ -82,10 +82,10 @@ XXXX;
                     "end                        " .
                     "native/end;                " .
                     "par/or do                  " .
-                        $_REQUEST['code']       ." ".
+                        $_REQUEST['code']       ."\n".
                     "with                       " .
                     "   await async do          " .
-                            $input              ." ".
+                            $input              ."\n".
                     "   end                     " .
                     "with                       " .
                     "   do await FOREVER; end   " .
