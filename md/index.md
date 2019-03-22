@@ -49,7 +49,7 @@ frameborder="0" allowfullscreen>
 - <a target="_blank" href="./try.php">Online tutorial</a> </li>
 - <a href="./manuals.html"> Manuals </a> </li>
 - <a href="./tutorials.html"> Tutorials </a> </li>              
-- <a href="http://www.ceu-lang.org/chico/#ceu"> Academic papers </a> </li>
+- <a href="./publications.html"> Academic papers </a> </li>
 - <a href="http://groups.google.com/group/ceu-lang"> Mailing list </a> </li>
 - <a href="https://gitter.im/fsantanna/ceu"> Online chat </a></li>
 
